@@ -57,19 +57,20 @@ const sideProjects = [
     name: "Vendor Reconciliation",
     description: "",
   },
-    {
+  {
     id: 1,
     url: "https://schedule-iii.finsensor.ai/",
     name: "Schedule 3",
     description: "",
   },
-    {
+  {
     id: 2,
     url: "https://fixed-assets-tool-frontend.vercel.app/",
     name: "Fixed Assets Tool",
     description: "",
+    code: "",
+    live: "",
   },
-
 ];
 export default async function Page() {
   const { data } = await getPinnedProjects();
@@ -96,7 +97,7 @@ export default async function Page() {
                 Active
               </span>
               <span className="tracking-tighter text-xs font-medium text-green-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5">
-                Freelancing [Startup]
+                Freelancing
               </span>
             </div>
             <span className="text-xs text-neutral-500">{repo.description}</span>
