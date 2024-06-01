@@ -53,10 +53,23 @@ export const metadata: Metadata = {
 const sideProjects = [
   {
     id: 0,
-    url: "https://www.traveltree.co/",
-    name: "traveltree.co",
-    description: "Your travel bucketlist and profile made easy.",
+    url: "https://vendor-reconciliation-forked.vercel.app/",
+    name: "Vendor Reconciliation",
+    description: "",
   },
+    {
+    id: 1,
+    url: "https://schedule-iii.finsensor.ai/",
+    name: "Schedule 3",
+    description: "",
+  },
+    {
+    id: 1,
+    url: "https://fixed-assets-tool-frontend.vercel.app/",
+    name: "Fixed Assets Tool",
+    description: "",
+  },
+
 ];
 export default async function Page() {
   const { data } = await getPinnedProjects();
@@ -82,6 +95,9 @@ export default async function Page() {
               <span className="tracking-tighter text-xs font-medium text-blue-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5">
                 Active
               </span>
+              <span className="tracking-tighter text-xs font-medium text-green-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5">
+                Freelancing [Startup]
+              </span>
             </div>
             <span className="text-xs text-neutral-500">{repo.description}</span>
           </a>
@@ -100,6 +116,9 @@ export default async function Page() {
             <div>
               <span className="text-sm underline underline-offset-4">
                 {repo.name}
+              </span>
+              <span className="tracking-tighter text-xs font-medium text-red-500 bg-yellow-500 bg-opacity-10 rounded-full px-2 py-0.5">
+                Normal [Learning]
               </span>
             </div>
             <span className="text-xs text-neutral-500">{repo.description}</span>
