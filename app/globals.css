@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply dark:bg-[#111111] bg-white dark:text-white text-black;
+  }
+}
+
+html {
+  min-width: 360px;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.scrollcontainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollcontainer::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.scrollcontainer::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-zinc-200 dark:bg-[#212121];
+}
