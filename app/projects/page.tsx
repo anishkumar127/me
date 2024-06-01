@@ -64,7 +64,7 @@ const sideProjects = [
     description: "",
   },
     {
-    id: 1,
+    id: 2,
     url: "https://fixed-assets-tool-frontend.vercel.app/",
     name: "Fixed Assets Tool",
     description: "",
