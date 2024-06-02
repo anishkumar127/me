@@ -14,9 +14,9 @@ export default function Page() {
       <br />
 
       <section className="technical-expertise-section">
-        <h2>Technical Expertise</h2>
+        <h2 className="font-bold">Technical Expertise</h2>
 
-        <ul>
+        <ul className="text-sm inline text-justify">
           <li>
             <strong>Languages:</strong> JavaScript, TypeScript, Java, Python
           </li>
