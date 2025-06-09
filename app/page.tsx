@@ -6,8 +6,9 @@ export default function Page() {
       <p className="text-sm inline text-justify">
         Hi, I work as a MERN stack developer from Abohar, Punjab, India. I
         specialize in both frontend and backend technologies. Proficient in
-        JavaScript, TypeScript, React, Next.js, Redux, Node.js, Express, and
-        database technologies including SharePoint and MongoDB. <EasterEgg />
+        JavaScript, TypeScript, React, Next.js, Redux, Node.js, Express,
+        Fastify, and database technologies including SharePoint, MongoDB and
+        PostgreSQL. <EasterEgg />
       </p>
       <br />
 
@@ -25,10 +26,10 @@ export default function Page() {
             CSS, Tailwind CSS, Fluent UI
           </li>
           <li>
-            <strong>Backend:</strong> Node.js, Express.js
+            <strong>Backend:</strong> Node.js, Express.js, Fastify.js
           </li>
           <li>
-            <strong>Databases:</strong> MongoDB, SharePoint
+            <strong>Databases:</strong> MongoDB, SharePoint, PostgreSQL
           </li>
           <li>
             <strong>Tools & Platforms:</strong> Git, GitHub, Docker, AWS
