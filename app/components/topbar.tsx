@@ -33,22 +33,21 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
         <div>
           <h1 className="font-bold text-xl">anish kumar</h1>
           <p className="text-sm text-neutral-500">
-            {`software engineer at `}
-            <a
-              className="underline underline-offset-4"
+            {`Software Development Engineer at `}
+            <Link              className="underline underline-offset-4"
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.cubiclogics.com/"
             >
               Cubic Logics
-            </a>
+            </Link>
           </p>
         </div>
         <div className="relative flex items-center space-x-2 py-2">
           <SocialsLink href="tel:+919649275150">
             <PhoneIcon />
           </SocialsLink>
-          <SocialsLink  href="mailto:anishbishnoi127@gmail.com">
+          <SocialsLink href="mailto:anishbishnoi127@gmail.com">
             <GmailIcon />
           </SocialsLink>
           <SocialsLink href="https://github.com/anishkumar127">
@@ -71,7 +70,7 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
               "h-7 w-7 rounded-md hover:bg-gray-100 hover:dark:bg-[#1c1c1c] flex justify-center items-center",
               {
                 "bg-gray-100 dark:bg-[#1c1c1c]": isOpen,
-              }
+              },
             )}
           >
             <TerminalIcon />
@@ -82,7 +81,7 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
               {
                 "opacity-0": !isOpen,
                 "animate-pulse": isOpen,
-              }
+              },
             )}
           ></div>
         </div>
@@ -99,7 +98,7 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
                   "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle",
                   {
                     "text-neutral-500": !isActive,
-                  }
+                  },
                 )}
               >
                 {name}
