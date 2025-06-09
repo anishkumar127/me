@@ -17,6 +17,7 @@ const query = `
     }
   }
 `;
+
 type PinnedRepo = {
   data: {
     viewer: {
@@ -72,36 +73,37 @@ const sideProjects = [
     live: "",
   },
 ];
-// const cubicProjects = [
-//   {
-//     id: 0,
-//     url: "#",
-//     name: "Helpdesk 365",
-//     description: "Sharepoint, Fluent UI",
-//   },
-//   {
-//     id: 1,
-//     url: "#",
-//     name: "Civic 365 (Multi Tenant)",
-//     description: "Sharepoint",
-//   },
-//   {
-//     id: 2,
-//     url: "#",
-//     name: "Email Tracking",
-//     description: "Fastify.js, PostgreSQL",
-//     code: "",
-//     live: "",
-//   },
-//   {
-//     id: 3,
-//     url: "#",
-//     name: "Logs Module",
-//     description: "Sharepoint SPFx",
-//     code: "",
-//     live: "",
-//   },
-// ];
+const cubicProjects = [
+  {
+    id: 0,
+    url: "#",
+    name: "Helpdesk 365",
+    description: "Sharepoint, Fluent UI",
+    tech:""
+  },
+  {
+    id: 1,
+    url: "#",
+    name: "Civic 365 (Multi Tenant)",
+    description: "Sharepoint",
+  },
+  {
+    id: 2,
+    url: "#",
+    name: "Email Tracking",
+    description: "Fastify.js, PostgreSQL",
+    code: "",
+    live: "",
+  },
+  {
+    id: 3,
+    url: "#",
+    name: "Logs Module",
+    description: "Sharepoint SPFx",
+    code: "",
+    live: "",
+  },
+];
 export default async function Page() {
   const { data } = await getPinnedProjects();
 
@@ -109,31 +111,31 @@ export default async function Page() {
 
   return (
     <ul className="space-y-4">
-      {/* {cubicProjects.map((repo) => ( */}
-      {/*   <li key={repo.id}> */}
-      {/*     <a */}
-      {/*       className="bg-transparent border border-[#ecebeb] hover:border-[#999] dark:border-[#333] hover:dark:bg-[#ffffff05] */}
-      {/*       transition-colors */}
-      {/*       p-2 flex flex-col space-y-1.5 !no-underline rounded-md" */}
-      {/*       rel="noopener noreferrer" */}
-      {/*       target="_blank" */}
-      {/*       href={repo.url} */}
-      {/*     > */}
-      {/*       <div className="flex items-center space-x-2"> */}
-      {/*         <span className="text-sm underline underline-offset-4"> */}
-      {/*           {repo.name} */}
-      {/*         </span> */}
-      {/*         <span className="tracking-tighter text-xs font-medium text-blue-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5"> */}
-      {/*           Active */}
-      {/*         </span> */}
-      {/*         <span className="tracking-tighter text-xs font-medium text-green-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5"> */}
-      {/*           Cubic Logics */}
-      {/*         </span> */}
-      {/*       </div> */}
-      {/*       <span className="text-xs text-neutral-500">{repo.description}</span> */}
-      {/*     </a> */}
-      {/*   </li> */}
-      {/* ))} */}
+      {cubicProjects.map((repo) => (
+        <li key={repo.id}>
+          <a
+            className="bg-transparent border border-[#ecebeb] hover:border-[#999] dark:border-[#333] hover:dark:bg-[#ffffff05]
+            transition-colors
+            p-2 flex flex-col space-y-1.5 !no-underline rounded-md"
+            rel="noopener noreferrer"
+            target="_blank"
+            href={repo.url}
+          >
+            <div className="flex items-center space-x-2">
+              <span className="text-sm underline underline-offset-4">
+                {repo.name}
+              </span>
+              <span className="tracking-tighter text-xs font-medium text-blue-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5">
+                Active
+              </span>
+              <span className="tracking-tighter text-xs font-medium text-green-500 bg-blue-500 bg-opacity-10 rounded-full px-2 py-0.5">
+                Cubic Logics
+              </span>
+            </div>
+            <span className="text-xs text-neutral-500">{repo.description}</span>
+          </a>
+        </li>
+      ))}
       {sideProjects.map((repo) => (
         <li key={repo.id}>
           <a
@@ -174,7 +176,7 @@ export default async function Page() {
                 {repo.name}
               </span>
               <span className="tracking-tighter text-xs font-medium text-red-500 bg-yellow-500 bg-opacity-10 rounded-full px-2 py-0.5">
-                Normal [Learning]
+                Github Pinned Repo
               </span>
             </div>
             <span className="text-xs text-neutral-500">{repo.description}</span>
