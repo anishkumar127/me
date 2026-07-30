@@ -147,10 +147,32 @@
       "norm_label": "categorylabels"
     },
     {
-      "label": "ProjectCard()",
+      "label": "getLinkLabel()",
       "file_type": "code",
       "source_file": "app/components/project-card.tsx",
       "source_location": "L22",
+      "_origin": "ast",
+      "id": "app_components_project_card_getlinklabel",
+      "community": 4,
+      "community_name": "projects/page.tsx",
+      "norm_label": "getlinklabel()"
+    },
+    {
+      "label": "ExternalLinkIcon()",
+      "file_type": "code",
+      "source_file": "app/components/project-card.tsx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "app_components_project_card_externallinkicon",
+      "community": 4,
+      "community_name": "projects/page.tsx",
+      "norm_label": "externallinkicon()"
+    },
+    {
+      "label": "ProjectCard()",
+      "file_type": "code",
+      "source_file": "app/components/project-card.tsx",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "app_components_project_card_projectcard",
       "community": 4,
@@ -1693,7 +1715,29 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/components/project-card.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_components_project_card",
+      "target": "app_components_project_card_externallinkicon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/project-card.tsx",
       "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_components_project_card",
+      "target": "app_components_project_card_getlinklabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/project-card.tsx",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_components_project_card",
@@ -1746,6 +1790,18 @@
       "_origin": "ast",
       "source": "app_projects_page",
       "target": "app_components_project_card",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/components/project-card.tsx",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_components_project_card_projectcard",
+      "target": "app_components_project_card_getlinklabel",
       "confidence_score": 1.0
     },
     {
@@ -3219,5 +3275,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a35a5cc04f06fbd7f986bf2eefc39181b8f5ab62"
+  "built_at_commit": "64c5c35800b44f5022e3cf7047a161e57b2a5eeb"
 }

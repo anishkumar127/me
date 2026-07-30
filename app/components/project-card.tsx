@@ -19,19 +19,41 @@ const categoryLabels: Record<ProjectCategory, string> = {
   Learning: "Fun / Learning",
 };
 
+function getLinkLabel(url: string) {
+  if (url.includes("github.com")) return "View on GitHub";
+  if (url.includes("marketplace.microsoft.com")) return "View on Marketplace";
+  return "Visit website";
+}
+
+function ExternalLinkIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="shrink-0"
+      aria-hidden="true"
+    >
+      <path d="M15 3h6v6" />
+      <path d="M10 14 21 3" />
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </svg>
+  );
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
   const hasUrl = project.url && project.url !== "#";
 
-  const content = (
-    <>
+  return (
+    <div className="bg-transparent border border-[#ecebeb] dark:border-[#333] transition-colors p-3 flex flex-col space-y-2 rounded-md">
       <div className="flex flex-wrap items-center gap-2">
-        <span
-          className={clsx("text-sm", {
-            "underline underline-offset-4": hasUrl,
-          })}
-        >
-          {project.name}
-        </span>
+        <span className="text-sm font-medium">{project.name}</span>
         <span
           className={clsx(
             "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
@@ -54,6 +76,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <span className="text-xs text-neutral-400">{project.period}</span>
         )}
       </div>
+
       <div className="flex flex-wrap gap-1.5">
         {project.tech.map((t) => (
           <span
@@ -64,7 +87,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
-      <span className="text-xs text-neutral-500">{project.description}</span>
+
+      <p className="text-xs text-neutral-500">{project.description}</p>
+
       {project.highlights && project.highlights.length > 0 && (
         <ul className="text-xs text-neutral-500 list-disc list-inside space-y-0.5">
           {project.highlights.map((h) => (
@@ -72,24 +97,18 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </ul>
       )}
-    </>
+
+      {hasUrl && (
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 w-fit mt-1"
+        >
+          <ExternalLinkIcon />
+          {getLinkLabel(project.url!)}
+        </a>
+      )}
+    </div>
   );
-
-  const className =
-    "bg-transparent border border-[#ecebeb] hover:border-[#999] dark:border-[#333] hover:dark:bg-[#ffffff05] transition-colors p-3 flex flex-col space-y-2 !no-underline rounded-md";
-
-  if (hasUrl) {
-    return (
-      <a
-        className={className}
-        rel="noopener noreferrer"
-        target="_blank"
-        href={project.url}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return <div className={className}>{content}</div>;
 }
