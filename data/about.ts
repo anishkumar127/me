@@ -24,7 +24,7 @@ export const about = {
     "Built Helpdesk 365 across 3 architectures: SPFx/SharePoint, multi-tenant Next.js + SharePoint (Google/GCP), and Next.js + Hono + PostgreSQL",
     "Delivered Civic 375 multi-tenant application with SharePoint integration",
     "Shipped production Finsensor AI tools — FinSoEasy360, ReconSoEasy360, RPTsoEasy360, and FAMsoEasy360 — with complex MongoDB/PostgreSQL backends on AWS",
-    "Independently developed and deployed HRMS, FAMsoEasy360, and FP&A financial tools",
+    "Independently developed and deployed OMSSoEasy360 (HRMS), FAMsoEasy360, and FP&A financial tools",
     "Created Weavify — reusable React UI component library (MUI + Tailwind CSS)",
   ],
 

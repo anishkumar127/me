@@ -79,7 +79,7 @@ export const projects: Project[] = [
   },
   {
     id: "reconsoeasy360",
-    name: "ReconSoEasy360",
+    name: "ReconSoEasy360 (Vendor Reconciliation)",
     category: "Freelancing",
     status: "Active",
     tech: ["MongoDB", "Express.js", "AWS", "React"],
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   },
   {
     id: "finsoeasy360",
-    name: "FinSoEasy360",
+    name: "FinSoEasy360 (Schedule III / Statutory Reporting)",
     category: "Freelancing",
     status: "Active",
     tech: [
@@ -114,7 +114,7 @@ export const projects: Project[] = [
   },
   {
     id: "rptsoeasy360",
-    name: "RPTsoEasy360",
+    name: "RPTsoEasy360 (Related Party Transactions)",
     category: "Freelancing",
     status: "Active",
     tech: ["Express.js", "MongoDB", "AWS", "React", "Schedule III"],
@@ -128,26 +128,27 @@ export const projects: Project[] = [
   },
   {
     id: "famsoeasy360",
-    name: "FAMsoEasy360",
+    name: "FAMsoEasy360 (Fixed Assets)",
     category: "Freelancing",
     status: "Active",
     tech: ["PostgreSQL", "Fastify.js", "AWS", "React", "Schedule III"],
-    url: "https://fixed-assets-tool-frontend.vercel.app/",
+    url: "https://farsoeasy360.vercel.app/",
     description:
-      "Fixed asset management software (FAMsoEasy360) at Finsensor AI — effortlessly manage and verify physical assets with Schedule III–compliant fixed asset schedules under the Companies Act 2013. Track acquisitions, depreciation, disposals, and asset-wise registers with accurate reporting aligned to audit and regulatory requirements.",
+      "Fixed asset management software at Finsensor AI — effortlessly manage and verify physical assets with Schedule III–compliant fixed asset schedules under the Companies Act 2013. Track acquisitions, depreciation, disposals, and asset-wise registers with accurate reporting aligned to audit and regulatory requirements.",
     highlights: [
       "Complete backend with PostgreSQL and Fastify — asset lifecycle, depreciation, and roll-forward schedules",
       "Frontend integration and AWS deployment",
     ],
   },
   {
-    id: "hrms",
-    name: "HRMS Application",
+    id: "omssoeasy360",
+    name: "OMSSoEasy360 (HRMS)",
     category: "Freelancing",
     status: "Active",
-    tech: ["PostgreSQL", "Fastify.js", "AWS", "Hostinger"],
+    tech: ["PostgreSQL", "Fastify.js", "AWS", "Hostinger", "React"],
+    url: "https://omssoeasy360.vercel.app/",
     description:
-      "Human Resource Management System — employee records, attendance, and payroll modules. Deployed on AWS and Hostinger.",
+      "Human Capital Management software at Finsensor AI — employee records, attendance, payroll, and HR workflows. Deployed on AWS and Hostinger.",
   },
   {
     id: "fpa-tools",
