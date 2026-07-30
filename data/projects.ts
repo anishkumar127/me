@@ -78,6 +78,30 @@ export const projects: Project[] = [
       "Alternative Helpdesk 365 stack using Next.js with Hono API layer and PostgreSQL for data persistence and improved performance.",
   },
   {
+    id: "civic-365-spfx",
+    name: "Civic 365 (SharePoint / Microsoft Teams)",
+    category: "Cubic Logics",
+    status: "Completed",
+    period: "Sep 2023 – Feb 2026",
+    tech: [
+      "React.js",
+      "Redux",
+      "SharePoint",
+      "SPFx",
+      "Fluent UI",
+      "Microsoft Teams",
+      "Azure",
+    ],
+    url: "https://marketplace.microsoft.com/en-us/product/WA200006430",
+    description:
+      "Development on Civic 365 — a Microsoft Marketplace 311 CRM citizen experience platform by Apps 365 & HR365 for SharePoint and Teams. Manages citizen service requests with knowledge base, omni-channel portal, call centre integration, Esri mapping, and automated routing with SLA escalation.",
+    highlights: [
+      "SPFx webparts deployable on SharePoint pages, Teams tabs, and Teams personal app",
+      "311 CRM workflows — duplicate management, two-way resident communication, and dynamic reporting",
+      "Microsoft Partner solution — zero-trust security with data kept within client's M365/Azure cloud",
+    ],
+  },
+  {
     id: "civic-375",
     name: "Civic 375 (Multi-Tenant)",
     category: "Cubic Logics",
