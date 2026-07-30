@@ -78,14 +78,18 @@ export const projects: Project[] = [
       "Published reusable logger npm packages for structured logging across SPFx webparts and Node.js services.",
   },
   {
-    id: "vendor-reconciliation",
-    name: "Vendor Reconciliation",
+    id: "reconsoeasy360",
+    name: "ReconSoEasy360",
     category: "Freelancing",
     status: "Active",
-    tech: ["MongoDB", "Express.js", "AWS"],
+    tech: ["MongoDB", "Express.js", "AWS", "React"],
     url: "https://vendor-reconciliation-forked.vercel.app/",
     description:
-      "Complex backend for vendor reconciliation at Finsensor AI — automated matching, discrepancy detection, and financial data processing with full AWS deployment.",
+      "Vendor reconciliation software at Finsensor AI — automatically match vendor statements against ledger records, identify discrepancies with detailed reasons for mismatches, and generate instant reconciliation reports so books reflect the true financial position.",
+    highlights: [
+      "Complex backend for automated matching, variance detection, and financial data processing",
+      "Full AWS deployment with real-time reporting dashboards",
+    ],
   },
   {
     id: "finsoeasy360",
@@ -109,14 +113,32 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "fixed-assets",
-    name: "Fixed Assets Tool",
+    id: "rptsoeasy360",
+    name: "RPTsoEasy360",
     category: "Freelancing",
     status: "Active",
-    tech: ["PostgreSQL", "Fastify.js", "AWS"],
+    tech: ["Express.js", "MongoDB", "AWS", "React", "Schedule III"],
+    url: "https://www.finsoeasy360.finsensor.ai/",
+    description:
+      "Related party transaction tool at Finsensor AI — automates identification and elimination of intercompany and related party transactions across units, subsidiaries, joint ventures, and associates for accurate, compliant, and efficient consolidated financial statements.",
+    highlights: [
+      "Backend for RPT mapping, intercompany eliminations, and consolidation adjustments",
+      "Supports regulatory compliance for related party disclosures under Companies Act and Ind AS",
+    ],
+  },
+  {
+    id: "famsoeasy360",
+    name: "FAMsoEasy360",
+    category: "Freelancing",
+    status: "Active",
+    tech: ["PostgreSQL", "Fastify.js", "AWS", "React", "Schedule III"],
     url: "https://fixed-assets-tool-frontend.vercel.app/",
     description:
-      "Fixed asset tracking and management — complete backend with PostgreSQL and Fastify, frontend integration, and AWS deployment.",
+      "Fixed asset management software (FAMsoEasy360) at Finsensor AI — effortlessly manage and verify physical assets with Schedule III–compliant fixed asset schedules under the Companies Act 2013. Track acquisitions, depreciation, disposals, and asset-wise registers with accurate reporting aligned to audit and regulatory requirements.",
+    highlights: [
+      "Complete backend with PostgreSQL and Fastify — asset lifecycle, depreciation, and roll-forward schedules",
+      "Frontend integration and AWS deployment",
+    ],
   },
   {
     id: "hrms",
@@ -134,7 +156,7 @@ export const projects: Project[] = [
     status: "Active",
     tech: ["Node.js", "PostgreSQL", "MongoDB"],
     description:
-      "Financial Planning & Analysis suite for enterprise clients — trial balance, related party transactions, lease management, manual entries, adjustments, and Excel report generation.",
+      "Financial Planning & Analysis suite for enterprise clients — trial balance, lease management, manual entries, adjustments, and Excel report generation.",
   },
   {
     id: "other-freelance",

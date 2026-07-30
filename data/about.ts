@@ -23,8 +23,8 @@ export const about = {
   achievements: [
     "Built Helpdesk 365 across 3 architectures: SPFx/SharePoint, multi-tenant Next.js + SharePoint (Google/GCP), and Next.js + Hono + PostgreSQL",
     "Delivered Civic 375 multi-tenant application with SharePoint integration",
-    "Shipped production freelancing tools at Finsensor AI (Vendor Reconciliation, FinSoEasy360) with complex MongoDB backends on AWS",
-    "Independently developed and deployed HRMS, Fixed Assets Tool, and FP&A financial tools",
+    "Shipped production Finsensor AI tools — FinSoEasy360, ReconSoEasy360, RPTsoEasy360, and FAMsoEasy360 — with complex MongoDB/PostgreSQL backends on AWS",
+    "Independently developed and deployed HRMS, FAMsoEasy360, and FP&A financial tools",
     "Created Weavify — reusable React UI component library (MUI + Tailwind CSS)",
   ],
 
