@@ -88,14 +88,25 @@ export const projects: Project[] = [
       "Complex backend for vendor reconciliation at Finsensor AI — automated matching, discrepancy detection, and financial data processing with full AWS deployment.",
   },
   {
-    id: "schedule-iii",
-    name: "Schedule III",
+    id: "finsoeasy360",
+    name: "FinSoEasy360",
     category: "Freelancing",
     status: "Active",
-    tech: ["Express.js", "MongoDB", "AWS"],
-    url: "https://schedule-iii.finsensor.ai/",
+    tech: [
+      "Express.js",
+      "MongoDB",
+      "AWS",
+      "React",
+      "Excel Export",
+      "Schedule III",
+    ],
+    url: "https://www.finsoeasy360.finsensor.ai/",
     description:
-      "Schedule III financial reporting tool at Finsensor AI — complex backend for regulatory compliance data, with frontend deployment and UI guidance.",
+      "Financial reporting software at Finsensor AI for generating Schedule III–compliant Balance Sheet, P&L, and Cash Flow statements — with real-time consolidation, manual entry workflows, notes-to-accounts management, and Excel export.",
+    highlights: [
+      "Complex backend for multi-unit consolidation, segment-wise reporting, and audit trails",
+      "Frontend deployment, UI guidance, and collaborative reviewer workflows",
+    ],
   },
   {
     id: "fixed-assets",
