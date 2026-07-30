@@ -18,31 +18,73 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "helpdesk-365",
-    name: "Helpdesk 365",
+    id: "helpdesk-spfx",
+    name: "Helpdesk 365 (SharePoint / Microsoft Teams)",
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
     tech: [
       "React.js",
       "Redux",
-      "Next.js",
       "SharePoint",
       "SPFx",
       "Fluent UI",
       "Microsoft Teams",
-      "Hono",
-      "PostgreSQL",
       "Azure DevOps",
     ],
     url: "https://marketplace.microsoft.com/en-us/product/office/wa200004972?tab=overview",
     description:
-      "Flagship Microsoft Marketplace ticketing product (4.9★, 311+ ratings) by Apps 365 & HR365 for SharePoint and Microsoft Teams. IT, HR, and Finance helpdesk with AI-powered automation, knowledge base, SLA management, and M365 ecosystem integration.",
+      "Core product development on Helpdesk 365 — a Microsoft Marketplace ticketing system (4.9★, 311+ ratings) by Apps 365 & HR365 for SharePoint and Microsoft Teams. IT, HR, and Finance helpdesk with AI-powered automation, knowledge base, SLA management, and M365 ecosystem integration.",
     highlights: [
-      "Core SPFx webparts and Teams tabs — dashboards, automation rules, approval workflows, Kanban view, and mail tracker",
-      "Add-ons package on Marketplace — CSAT surveys, chatbot, ticket archival, MS Forms integration, and multi-language support",
-      "Architecture variants: multi-tenant (Next.js + SharePoint + PostgreSQL on GCP), and Next.js + Hono API + PostgreSQL stack",
+      "SPFx webparts and Teams tabs — deployable as web part, full page, or Teams personal/channel tab",
+      "Built features including dashboards, automation rules, approval workflows, Kanban view, and mail tracker",
       "Microsoft 365 Certified App — GCC/GCC High compliant, Zero Trust security within M365",
+    ],
+  },
+  {
+    id: "helpdesk-addons",
+    name: "Helpdesk 365 Add-ons",
+    category: "Cubic Logics",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
+    tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI", "Microsoft Teams"],
+    url: "https://marketplace.microsoft.com/en-us/product/hr365bizapps365.hd365p5a001ao?tab=Overview",
+    description:
+      "Developed Helpdesk 365 Add-ons — extended SaaS package on Microsoft Marketplace with advanced ticketing capabilities for SharePoint and Microsoft Teams, including custom forms, knowledge base, multi-language support, and automation.",
+    highlights: [
+      "Modern view, rules & automation, approval workflows, chatbot, ticket archival, and SLA choices",
+      "Kanban view, CSAT surveys, custom columns, ticket splitting/merging, and MS Forms integration",
+      "Canned responses, email templates, auto-assign, auto-close, and multi-role support",
+    ],
+  },
+  {
+    id: "helpdesk-multitenant",
+    name: "Helpdesk 365 Multi-Tenant",
+    category: "Cubic Logics",
+    status: "Completed",
+    period: "Jan 2025 – Feb 2026",
+    tech: ["Next.js", "SharePoint", "Microsoft Entra ID", "Google OAuth", "Apple Sign-In"],
+    description:
+      "Multi-tenant Helpdesk 365 built with Next.js and SharePoint as the data layer — enabling cross-tenant get, post, update, and delete operations that standard SPFx cannot support (SPFx only surfaces data from the tenant where the solution is deployed).",
+    highlights: [
+      "Any tenant URL can be entered — after login via Microsoft (internal/external), Google, or Apple, the linked tenant's data is mapped and loaded",
+      "Tenant mapping connects external identity providers to the correct SharePoint tenant and Helpdesk data",
+      "Same Helpdesk 365 product experience with true multi-tenant, cross-tenant data access beyond SPFx limitations",
+    ],
+  },
+  {
+    id: "helpdesk-hono",
+    name: "Helpdesk 365 (Next.js + PostgreSQL)",
+    category: "Cubic Logics",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
+    tech: ["Next.js", "Hono", "PostgreSQL", "Azure App Service", "Azure Database for PostgreSQL"],
+    description:
+      "Helpdesk 365 variant built on Next.js with PostgreSQL — Hono runs as the API layer inside Next.js, replacing SharePoint as the data store for this architecture.",
+    highlights: [
+      "Next.js frontend with Hono API routes embedded inside the Next.js application",
+      "PostgreSQL on Azure Database for PostgreSQL — Flexible Server for data persistence",
+      "Deployed on Azure App Service — full Helpdesk product on a modern web stack",
     ],
   },
   {
@@ -75,10 +117,15 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Sep 2023 – Feb 2026",
-    tech: ["Next.js", "Redux", "SharePoint", "SPFx"],
+    tech: ["Next.js", "Redux", "SharePoint", "Google Maps", "Microsoft Entra ID", "Google OAuth", "Apple Sign-In"],
     url: "https://civic365.ca/",
     description:
-      "Multi-tenant Civic 365 platform with SharePoint integration — handles tenant isolation, role-based access, and civic service workflows for government and local authorities.",
+      "Multi-tenant Civic 365 built with Next.js and SharePoint as the data layer — cross-tenant get, post, update, and delete for civic service data that standard SPFx cannot access across tenants.",
+    highlights: [
+      "Any tenant URL with Microsoft (internal/external), Google, or Apple login — linked tenant data mapped and loaded on authentication",
+      "Google Maps integration — pin a location on the map and assign a tenant to that geographic area",
+      "True multi-tenant civic workflows beyond SPFx single-tenant deployment limits",
+    ],
   },
   {
     id: "mail-tracker",
@@ -86,9 +133,15 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Oct 2024 – Nov 2024",
-    tech: ["Fastify.js", "PostgreSQL"],
+    tech: ["Fastify.js", "PostgreSQL", "React", "Encryption"],
     description:
-      "Email tracking system with Fastify.js REST API and PostgreSQL — tracks email delivery, opens, and engagement metrics.",
+      "Internal mail tracking tool built for Cubic Logics sales and marketing teams — tracks outbound client emails end to end, from send and delivery to opens, reads, and replies.",
+    highlights: [
+      "Tracks delivery status, read timestamps, read count, IP address, and location of each open",
+      "Captures who responded to the email and when — full engagement timeline for sales follow-ups",
+      "Data stored in encrypted format — viewable in the tool UI, downloadable in multiple formats, and shareable with managers or team leads",
+      "Built both the tracking API (Fastify.js + PostgreSQL) and the admin UI — later integrated into Helpdesk 365 and other Cubic Logics products",
+    ],
   },
   {
     id: "logs-module",
@@ -96,9 +149,15 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
-    tech: ["SharePoint SPFx", "Node.js"],
+    tech: ["SharePoint SPFx", "Node.js", "Encryption"],
     description:
-      "Published reusable logger npm packages for structured logging across SPFx webparts and Node.js services.",
+      "Internal log monitoring module for Cubic Logics SPFx solutions — tracks trace, error, info, and warning logs with permission-based access, retention policies, and secure storage.",
+    highlights: [
+      "Permission-wise log visibility — teams can configure who sees which log levels and sources",
+      "Download logs in multiple formats and share via email directly from the module",
+      "Log retention policies — configurable duration, automatic archival to zip, and scheduled cleanup",
+      "Published as reusable npm packages with encryption and security built in — used across SPFx webparts and Node.js services",
+    ],
   },
   {
     id: "finsoeasy360",
