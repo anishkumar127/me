@@ -19,13 +19,43 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "helpdesk-spfx",
-    name: "Helpdesk 365 (SPFx)",
+    name: "Helpdesk 365 (SharePoint / Microsoft Teams)",
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
-    tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI"],
+    tech: [
+      "React.js",
+      "Redux",
+      "SharePoint",
+      "SPFx",
+      "Fluent UI",
+      "Microsoft Teams",
+      "Azure DevOps",
+    ],
+    url: "https://marketplace.microsoft.com/en-us/product/office/wa200004972?tab=overview",
     description:
-      "Built the complete Helpdesk 365 solution in SharePoint using SPFx — custom webparts, Fluent UI components, and Redux state management for ticket management workflows.",
+      "Core product development on Helpdesk 365 — a Microsoft Marketplace ticketing system (4.9★, 311+ ratings) by Apps 365 & HR365 for SharePoint and Microsoft Teams. IT, HR, and Finance helpdesk with AI-powered automation, knowledge base, SLA management, and M365 ecosystem integration.",
+    highlights: [
+      "SPFx webparts and Teams tabs — deployable as web part, full page, or Teams personal/channel tab",
+      "Built features including dashboards, automation rules, approval workflows, Kanban view, and mail tracker",
+      "Microsoft 365 Certified App — GCC/GCC High compliant, Zero Trust security within M365",
+    ],
+  },
+  {
+    id: "helpdesk-addons",
+    name: "Helpdesk 365 Add-ons",
+    category: "Cubic Logics",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
+    tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI", "Microsoft Teams"],
+    url: "https://marketplace.microsoft.com/en-us/product/hr365bizapps365.hd365p5a001?tab=Overview",
+    description:
+      "Developed Helpdesk 365 Add-ons — extended SaaS package on Microsoft Marketplace with advanced ticketing capabilities for SharePoint and Microsoft Teams, including custom forms, knowledge base, multi-language support, and automation.",
+    highlights: [
+      "Modern view, rules & automation, approval workflows, chatbot, ticket archival, and SLA choices",
+      "Kanban view, CSAT surveys, custom columns, ticket splitting/merging, and MS Forms integration",
+      "Canned responses, email templates, auto-assign, auto-close, and multi-role support",
+    ],
   },
   {
     id: "helpdesk-multitenant",

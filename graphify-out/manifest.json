@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "data/about.ts": {
-    "mtime": 1785395181.0920613,
-    "ast_hash": "6cb2cd9f4aee386fe34f1175700f460a",
+    "mtime": 1785395593.5577683,
+    "ast_hash": "46f7ac424fc20f478768132a835851f2",
     "semantic_hash": ""
   },
   "data/experience.ts": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "data/projects.ts": {
-    "mtime": 1785395180.0769272,
-    "ast_hash": "ed611daff2edb8e6e8806a3d68cfccc6",
+    "mtime": 1785395593.5577683,
+    "ast_hash": "28378d14b8b9167b33cb884bcb181a03",
     "semantic_hash": ""
   },
   "data/site.ts": {
