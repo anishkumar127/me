@@ -72,14 +72,11 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
             onClick={() => {
               setTheme(resolvedTheme === "dark" ? "light" : "dark");
             }}
-            aria-label={
-              resolvedTheme === "dark"
-                ? "Switch to light mode"
-                : "Switch to dark mode"
-            }
+            aria-label="Toggle color theme"
             className="h-7 w-7 rounded-md hover:bg-gray-100 hover:dark:bg-[#1c1c1c] flex justify-center items-center"
           >
-            {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
+            <SunIcon className="hidden dark:block" />
+            <MoonIcon className="block dark:hidden" />
           </button>
           <button
             type="button"
@@ -160,7 +157,7 @@ export function SocialsLink(props: any) {
   );
 }
 
-function SunIcon() {
+function SunIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +169,7 @@ function SunIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-sun h-4 w-4"
+      className={clsx("lucide lucide-sun h-4 w-4", className)}
       aria-hidden="true"
     >
       <circle cx="12" cy="12" r="4" />
@@ -188,7 +185,7 @@ function SunIcon() {
   );
 }
 
-function MoonIcon() {
+function MoonIcon({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +197,7 @@ function MoonIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-moon h-4 w-4"
+      className={clsx("lucide lucide-moon h-4 w-4", className)}
       aria-hidden="true"
     >
       <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
