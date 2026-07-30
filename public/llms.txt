@@ -1,30 +1,40 @@
-# Anish Kumar — Full Stack Developer
+# Anish Kumar — Full Stack Developer Portfolio
 
-> Portfolio of Anish Kumar, Full Stack Developer with 3+ years building production apps for Microsoft 365, fintech, and HR.
+> Hire Anish Kumar, Full Stack Developer in Bengaluru, India. 3+ years building production apps for Microsoft 365, SharePoint SPFx, fintech, and HR SaaS.
 
-## About
+## Identity
 
 - Name: Anish Kumar
 - Title: Full Stack Developer
 - Location: Bengaluru, Karnataka, India
 - Email: anishbishnoi127@gmail.com
+- Phone: +91 96492 75150
 - GitHub: https://github.com/anishkumar127
 - LinkedIn: https://www.linkedin.com/in/anishkumar127/
 - Resume: https://drive.google.com/file/d/1M0dBUFKkU5XhyPkpw0X-8K1GQaj-bsVW/view?usp=sharing
+- Open to: full-time and freelance opportunities
 
 ## Skills
 
-React.js, Next.js, Node.js, MongoDB, PostgreSQL, SharePoint, SPFx, Microsoft Teams, Fastify.js, Express.js, Hono, AWS, Azure DevOps, React Native, TypeScript
+JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, Fastify.js, Hono, MongoDB, PostgreSQL, SharePoint, SPFx, Microsoft Teams, Microsoft 365, Fluent UI, AWS, Azure, Azure DevOps, React Native, React Native Expo, Tailwind CSS, DevOps
 
-## Pages
+## Site pages
 
-- Home / About: https://anishkumar127.github.io/
-- Projects: https://anishkumar127.github.io/projects
-- Blog: https://anishkumar127.github.io/blog
+- About: https://anishkumar127.github.io/
+- Projects: https://anishkumar127.github.io/projects/
+- Blog: https://anishkumar127.github.io/blog/
+- Sitemap: https://anishkumar127.github.io/sitemap.xml
 
-## Notable Work
+## Notable work
 
-- Helpdesk 365 — Microsoft Marketplace ticketing product (4.9★)
-- Civic 365 — Microsoft Marketplace 311 CRM platform
-- Finsensor AI fintech tools — reconciliation, statutory reporting, fixed assets, HRMS
-- Personal HR SaaS — multi-organization platform (web + mobile)
+- Helpdesk 365 — Microsoft Marketplace ticketing (4.9★, 311+ ratings), SPFx, Teams, multi-tenant, PostgreSQL stack
+- Civic 365 — Microsoft Marketplace 311 CRM for government and local authorities
+- Finsensor AI — FinSoEasy360, RPTsoEasy360, ReconSoEasy360, FAMsoEasy360, OMSSoEasy360
+- Personal HR SaaS — multi-organization platform, web + React Native mobile, solo-built
+- Weavify — React UI component library (npm: weavify)
+- Mail Tracker & Logs Module — internal tools used across Cubic Logics products
+
+## Experience
+
+- Cubic Logics (Mar 2023 – Feb 2026) — Trainee Software Specialist → Software Specialist → Software Development Engineer
+- Freelance — Finsensor AI fintech products

@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/data/blog";
 import { site } from "@/data/site";
+import { canonicalUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Technical writing on full stack development, SharePoint, and SaaS.",
+  alternates: { canonical: canonicalUrl("/blog") },
+  openGraph: {
+    title: `Blog | ${site.handle}`,
+    url: canonicalUrl("/blog"),
+  },
 };
 
 export default function BlogPage() {

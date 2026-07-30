@@ -22,7 +22,7 @@ const navItems = {
 
 export default function Topbar({ resumeLink }: { resumeLink?: string }) {
   let pathname = usePathname() || "/";
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const { isOpen, toggleIsOpen } = useContext(TerminalContext);
 
   return (
@@ -44,17 +44,17 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
           <p className="text-sm text-green-700 dark:text-green-400 mt-1">
             {site.openToWork}
           </p>
-          <p className="text-sm mt-1">
+          <p className="text-sm mt-1 flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               href={`tel:${site.phone}`}
-              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300 w-fit"
             >
               {site.phoneDisplay}
             </a>
-            <span className="text-neutral-400 mx-2">·</span>
+            <span className="text-neutral-400 hidden sm:inline">·</span>
             <a
               href={`mailto:${site.email}`}
-              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300 truncate max-w-[200px] sm:max-w-none inline-block align-bottom"
+              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300 break-all sm:break-normal w-fit"
             >
               {site.email}
             </a>
@@ -70,12 +70,16 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
           <button
             type="button"
             onClick={() => {
-              setTheme(theme === "light" ? "dark" : "light");
+              setTheme(resolvedTheme === "dark" ? "light" : "dark");
             }}
-            aria-label="Toggle color theme"
+            aria-label={
+              resolvedTheme === "dark"
+                ? "Switch to light mode"
+                : "Switch to dark mode"
+            }
             className="h-7 w-7 rounded-md hover:bg-gray-100 hover:dark:bg-[#1c1c1c] flex justify-center items-center"
           >
-            <BrushIcon />
+            {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
           </button>
           <button
             type="button"
@@ -102,9 +106,9 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
           ></div>
         </div>
       </div>
-      <nav className="mb-6 flex flex-wrap justify-between items-center gap-3">
+      <nav className="mb-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-between sm:items-center">
         <div
-          className="inline-flex items-center gap-1 rounded-lg border p-1 border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900/60"
+          className="inline-flex items-center gap-1 rounded-lg border p-1 border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900/60 tab-scroll overflow-x-auto max-w-full w-full sm:w-auto"
           role="tablist"
           aria-label="Site navigation"
         >
@@ -118,7 +122,7 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
                 aria-selected={isActive}
                 aria-current={isActive ? "page" : undefined}
                 className={clsx(
-                  "px-3 py-1.5 rounded-md text-sm transition-all capitalize",
+                  "px-3 py-1.5 rounded-md text-sm transition-all capitalize whitespace-nowrap shrink-0",
                   isActive
                     ? "bg-white text-black font-semibold shadow-sm border border-neutral-300 dark:bg-neutral-800 dark:text-white dark:border-neutral-600"
                     : "text-neutral-600 hover:text-black hover:bg-white/80 dark:text-neutral-500 dark:hover:text-neutral-200 dark:hover:bg-neutral-800",
@@ -131,7 +135,7 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
         </div>
         {resumeLink ? (
           <a
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-neutral-300 bg-neutral-100 hover:bg-white dark:border-neutral-700 dark:bg-neutral-900/60 dark:hover:bg-neutral-800 transition-colors capitalize"
+            className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-neutral-300 bg-neutral-100 hover:bg-white dark:border-neutral-700 dark:bg-neutral-900/60 dark:hover:bg-neutral-800 transition-colors capitalize w-full sm:w-auto shrink-0"
             rel="noopener noreferrer"
             target="_blank"
             href={resumeLink}
@@ -156,7 +160,7 @@ export function SocialsLink(props: any) {
   );
 }
 
-function BrushIcon() {
+function SunIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -168,12 +172,38 @@ function BrushIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-paintbrush-2 h-4 w-4"
+      className="lucide lucide-sun h-4 w-4"
+      aria-hidden="true"
     >
-      <path d="M14 19.9V16h3a2 2 0 0 0 2-2v-2H5v2c0 1.1.9 2 2 2h3v3.9a2 2 0 1 0 4 0Z" />
-      <path d="M6 12V2h12v10" />
-      <path d="M14 2v4" />
-      <path d="M10 2v2" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="lucide lucide-moon h-4 w-4"
+      aria-hidden="true"
+    >
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
     </svg>
   );
 }

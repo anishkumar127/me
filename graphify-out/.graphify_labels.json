@@ -11,5 +11,7 @@
   "9": "README.md",
   "10": "tailwind.config.ts",
   "11": "postcss.config.js",
-  "12": "blog-post-page.tsx"
+  "12": "blog-post-page.tsx",
+  "13": "vercel.json",
+  "14": "blog-post-page.tsx"
 }

@@ -16,7 +16,10 @@ export const site = {
   github: "https://github.com/anishkumar127",
   resumeUrl:
     "https://drive.google.com/file/d/1M0dBUFKkU5XhyPkpw0X-8K1GQaj-bsVW/view?usp=sharing",
-  url: "https://anishkumar127.github.io",
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://anishkumar127.github.io").replace(
+    /\/$/,
+    "",
+  ),
   metadata: {
     title: "Anish Kumar | Full Stack Developer",
     description:
