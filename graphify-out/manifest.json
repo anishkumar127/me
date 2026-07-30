@@ -1,0 +1,132 @@
+{
+  ".eslintrc.json": {
+    "mtime": 1785389440.062204,
+    "ast_hash": "934a81616adbd809dfc38314baaa3409",
+    "semantic_hash": ""
+  },
+  "app/components/easter-egg.tsx": {
+    "mtime": 1785390870.1649973,
+    "ast_hash": "58f9c2663619487d7e460c43d2173c8a",
+    "semantic_hash": ""
+  },
+  "app/components/experience-timeline.tsx": {
+    "mtime": 1785390856.9438508,
+    "ast_hash": "27fe13e925cea97c71830b9147e3b616",
+    "semantic_hash": ""
+  },
+  "app/components/project-card.tsx": {
+    "mtime": 1785390854.4391456,
+    "ast_hash": "875b7d89de5d8a1524cd11eae8626c4e",
+    "semantic_hash": ""
+  },
+  "app/components/section-heading.tsx": {
+    "mtime": 1785390849.4926605,
+    "ast_hash": "d3450fe6eadf8988f2a1989f390c1c4d",
+    "semantic_hash": ""
+  },
+  "app/components/terminal.tsx": {
+    "mtime": 1785389440.0672045,
+    "ast_hash": "d4f2289041381fdca4a1ba43dd43c921",
+    "semantic_hash": ""
+  },
+  "app/components/topbar.tsx": {
+    "mtime": 1785390872.4432025,
+    "ast_hash": "9876c262fad56ecf122340a243e9745f",
+    "semantic_hash": ""
+  },
+  "app/layout.tsx": {
+    "mtime": 1785390863.4205163,
+    "ast_hash": "696c801fe75568b7645569667b4f20ca",
+    "semantic_hash": ""
+  },
+  "app/page.tsx": {
+    "mtime": 1785390867.148474,
+    "ast_hash": "c178a4330ff406ffaf359766ddb244a4",
+    "semantic_hash": ""
+  },
+  "app/projects/page.tsx": {
+    "mtime": 1785390868.9999855,
+    "ast_hash": "985eec6df3447482f021a6f1f62d1d25",
+    "semantic_hash": ""
+  },
+  "app/providers.tsx": {
+    "mtime": 1785389440.072378,
+    "ast_hash": "1c2f196a303784b8e305e207efed4130",
+    "semantic_hash": ""
+  },
+  "data/about.ts": {
+    "mtime": 1785390840.7711034,
+    "ast_hash": "7bc9c4186fc773bec0c84fc4a1ea03ad",
+    "semantic_hash": ""
+  },
+  "data/experience.ts": {
+    "mtime": 1785390840.7711034,
+    "ast_hash": "945a60b3a232eff4eac54c124e9b0ff7",
+    "semantic_hash": ""
+  },
+  "data/projects.ts": {
+    "mtime": 1785390846.800131,
+    "ast_hash": "9de9dd73f7113e4401301fdfc082ad5d",
+    "semantic_hash": ""
+  },
+  "data/site.ts": {
+    "mtime": 1785390840.7691023,
+    "ast_hash": "5f95631f1324a83003a05c1c6b39956e",
+    "semantic_hash": ""
+  },
+  "next.config.js": {
+    "mtime": 1785389440.0733814,
+    "ast_hash": "fedc1e55d463d13588468d5b882439ca",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1785389440.0743804,
+    "ast_hash": "cfb9e4d487ade9888df723acd1bdef1c",
+    "semantic_hash": ""
+  },
+  "postcss.config.js": {
+    "mtime": 1785389440.0766304,
+    "ast_hash": "762a94d1749c8e97eebf3f94102e8eb2",
+    "semantic_hash": ""
+  },
+  "tailwind.config.ts": {
+    "mtime": 1785389440.078642,
+    "ast_hash": "6389991b11f6fdea6f0ed8e71db015ea",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1785389440.078642,
+    "ast_hash": "7dae10cb3f3386ac45aa80364982b30e",
+    "semantic_hash": ""
+  },
+  ".github/workflows/nextjs.yml": {
+    "mtime": 1785390878.6126485,
+    "ast_hash": "a1124ab0321a707c5e67844a010b02a8",
+    "semantic_hash": ""
+  },
+  ".github/workflows/nextjs1.yml": {
+    "mtime": 1785390878.7144744,
+    "ast_hash": "61823cfdb016f744a95fd086cc09ffbe",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785389440.065687,
+    "ast_hash": "7f4624c0b3972ab6c22508fda7c854d8",
+    "semantic_hash": ""
+  },
+  "pnpm-workspace.yaml": {
+    "mtime": 1785389526.05017,
+    "ast_hash": "014a528fc34965f5f5ba0b7eb1b45795",
+    "semantic_hash": ""
+  },
+  "public/next.svg": {
+    "mtime": 1785389440.0776358,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "public/vercel.svg": {
+    "mtime": 1785389440.0776358,
+    "ast_hash": "61c6b19abff40ea7acd577be818f3976",
+    "semantic_hash": ""
+  }
+}

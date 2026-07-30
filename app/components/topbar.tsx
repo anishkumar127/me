@@ -22,7 +22,7 @@ const navItems = {
   // },
 };
 
-export default function Topbar({ resumeLink }: { resumeLink: string }) {
+export default function Topbar({ resumeLink }: { resumeLink?: string }) {
   let pathname = usePathname() || "/";
   const { theme, setTheme } = useTheme();
   const { isOpen, toggleIsOpen } = useContext(TerminalContext);
@@ -33,8 +33,9 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
         <div>
           <h1 className="font-bold text-xl">anish kumar</h1>
           <p className="text-sm text-neutral-500">
-            {`Software Development Engineer at `}
-            <Link              className="underline underline-offset-4"
+            MERN Stack Developer · 3+ yrs at{" "}
+            <Link
+              className="underline underline-offset-4"
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.cubiclogics.com/"
@@ -106,14 +107,18 @@ export default function Topbar({ resumeLink }: { resumeLink: string }) {
             );
           })}
         </div>
-        <a
-          className="underline underline-offset-4"
-          rel="noopener noreferrer"
-          target="_blank"
-          href={resumeLink}
-        >
-          resume
-        </a>
+        {resumeLink ? (
+          <a
+            className="underline underline-offset-4"
+            rel="noopener noreferrer"
+            target="_blank"
+            href={resumeLink}
+          >
+            resume
+          </a>
+        ) : (
+          <span className="text-neutral-400 text-sm">resume</span>
+        )}
       </nav>
     </header>
   );

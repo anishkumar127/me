@@ -1,14 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
+import { about } from "@/data/about";
 
 export function EasterEgg() {
   const [isMounted, setIsMounted] = useState(false);
   const [show, setShow] = useState(false);
-  const textToReveal = useTypingEffect(
-    "Coding for survival with a spark of passion on the side.",
-    200,
-    show
-  );
+  const textToReveal = useTypingEffect(about.easterEgg, 200, show);
   useEffect(() => {
     setIsMounted(true);
   }, []);

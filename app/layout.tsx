@@ -4,39 +4,7 @@ import { Roboto_Mono } from "next/font/google";
 import Topbar from "./components/topbar";
 import Providers from "./providers";
 import Terminal from "./components/terminal";
-
-const API_ENDPOINT = "https://api.github.com/graphql";
-const query = `
-  query {
-    viewer {
-      repository(name: "resume") {
-        homepageUrl
-      }
-    }
-  }
-`;
-type ResumeRepo = {
-  data: {
-    viewer: {
-      repository: {
-        homepageUrl: string;
-      };
-    };
-  };
-};
-
-async function getResumeRepo() {
-  const res = await fetch(API_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.GH_API_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({ query: query }),
-  });
-
-  return (await res.json()) as ResumeRepo;
-}
+import { site } from "@/data/site";
 
 const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
@@ -44,27 +12,23 @@ const roboto_mono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Anish Kumar | anishkumar127",
+    default: site.metadata.title,
     template: "%s | anishkumar127",
   },
-  description:
-    "Software engineer, Coding for survival with a spark of passion on the side.",
+  description: site.metadata.description,
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { data } = await getResumeRepo();
-  const resumeLink = data?.viewer?.repository?.homepageUrl;
-
   return (
     <html lang="en" className={roboto_mono.className}>
       <body className="antialiased min-h-screen">
         <Providers>
           <div className="flex flex-col container pt-8">
-            <Topbar resumeLink={resumeLink} />
+            <Topbar resumeLink={site.resumeUrl} />
             <main className="mb-8">{children}</main>
             <Terminal />
           </div>
