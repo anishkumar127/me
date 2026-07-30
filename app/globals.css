@@ -4,7 +4,9 @@
 
 @layer base {
   body {
-    @apply dark:bg-[#111111] bg-white dark:text-white text-black overflow-x-hidden;
+    @apply dark:bg-[#111111] bg-white dark:text-white text-black overflow-x-hidden leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }
 

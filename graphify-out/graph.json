@@ -543,21 +543,32 @@
       "norm_label": "layout.tsx"
     },
     {
-      "label": "roboto_mono",
+      "label": "inter",
       "file_type": "code",
       "source_file": "app/layout.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "app_layout_roboto_mono",
+      "id": "app_layout_inter",
       "community": 1,
       "community_name": "topbar.tsx",
-      "norm_label": "roboto_mono"
+      "norm_label": "inter"
+    },
+    {
+      "label": "robotoMono",
+      "file_type": "code",
+      "source_file": "app/layout.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "app_layout_robotomono",
+      "community": 1,
+      "community_name": "topbar.tsx",
+      "norm_label": "robotomono"
     },
     {
       "label": "viewport",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "app_layout_viewport",
       "community": 1,
@@ -568,7 +579,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L26",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "app_layout_metadata",
       "community": 1,
@@ -579,7 +590,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "app/layout.tsx",
-      "source_location": "L102",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "app_layout_rootlayout",
       "community": 1,
@@ -2954,7 +2965,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L26",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_layout",
+      "target": "app_layout_inter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/layout.tsx",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -2965,18 +2987,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L12",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
-      "target": "app_layout_roboto_mono",
+      "target": "app_layout_robotomono",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L102",
+      "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -2987,7 +3009,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/layout.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_layout",
@@ -4582,5 +4604,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0f50008f818ce1d2d9ac9b091573473f931c9b22"
+  "built_at_commit": "046a55eb1d1c837bf848dc72dfad8db5fc369d1e"
 }
