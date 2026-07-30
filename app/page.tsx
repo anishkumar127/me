@@ -69,13 +69,25 @@ export default function Page() {
 
       <section>
         <SectionHeading>Technical expertise</SectionHeading>
-        <ul className="space-y-1.5">
+        <div className="space-y-3">
           {Object.entries(about.skills).map(([category, skills]) => (
-            <li key={category}>
-              <strong>{category}:</strong> {skills.join(", ")}
-            </li>
+            <div key={category}>
+              <p className="text-sm font-bold text-neutral-800 dark:text-neutral-200 mb-1.5">
+                {category}
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="text-xs text-neutral-600 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800 rounded px-2 py-0.5"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     </div>
   );

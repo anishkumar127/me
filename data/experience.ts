@@ -4,6 +4,7 @@ export type ExperienceEntry = {
   companyUrl?: string;
   period: string;
   location?: string;
+  progression?: string;
 };
 
 export type EducationEntry = {
@@ -19,20 +20,8 @@ export const workExperience: ExperienceEntry[] = [
     companyUrl: "https://www.cubiclogics.com/",
     period: "Mar 2023 – Feb 2026",
     location: "Bengaluru, Karnataka, India",
-  },
-  {
-    role: "Software Specialist",
-    company: "Cubic Logics",
-    companyUrl: "https://www.cubiclogics.com/",
-    period: "Jun 2023 – Nov 2024",
-    location: "Bengaluru, Karnataka, India",
-  },
-  {
-    role: "Trainee Software Specialist",
-    company: "Cubic Logics",
-    companyUrl: "https://www.cubiclogics.com/",
-    period: "Mar 2023 – Jun 2023",
-    location: "Bengaluru, Karnataka, India",
+    progression:
+      "Trainee Software Specialist → Software Specialist → Software Development Engineer",
   },
 ];
 

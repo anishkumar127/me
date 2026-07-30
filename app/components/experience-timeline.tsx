@@ -6,12 +6,14 @@ function TimelineItem({
   subtitle,
   period,
   meta,
+  progression,
   url,
 }: {
   title: string;
   subtitle: string;
   period: string;
   meta?: string;
+  progression?: string;
   url?: string;
 }) {
   return (
@@ -34,6 +36,9 @@ function TimelineItem({
         {" · "}
         {period}
       </p>
+      {progression && (
+        <p className="text-xs text-neutral-400 mt-0.5">{progression}</p>
+      )}
       {meta && <p className="text-xs text-neutral-400">{meta}</p>}
     </li>
   );
@@ -53,6 +58,7 @@ export function ExperienceTimeline({
           subtitle={item.company}
           period={item.period}
           meta={item.location}
+          progression={item.progression}
           url={item.companyUrl}
         />
       ))}

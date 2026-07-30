@@ -10,5 +10,6 @@
   "8": "next.config.js",
   "9": "README.md",
   "10": "tailwind.config.ts",
-  "11": "postcss.config.js"
+  "11": "postcss.config.js",
+  "12": "blog-post-page.tsx"
 }

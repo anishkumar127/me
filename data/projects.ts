@@ -48,7 +48,7 @@ export const projects: Project[] = [
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
     tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI", "Microsoft Teams"],
-    url: "https://marketplace.microsoft.com/en-us/product/hr365bizapps365.hd365p5a001?tab=Overview",
+    url: "https://marketplace.microsoft.com/en-us/product/hr365bizapps365.hd365p5a001ao?tab=Overview",
     description:
       "Developed Helpdesk 365 Add-ons — extended SaaS package on Microsoft Marketplace with advanced ticketing capabilities for SharePoint and Microsoft Teams, including custom forms, knowledge base, multi-language support, and automation.",
     highlights: [
@@ -63,19 +63,29 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Jan 2025 – Feb 2026",
-    tech: ["Next.js", "SharePoint", "PostgreSQL"],
+    tech: ["Next.js", "SharePoint", "Microsoft Entra ID", "Google OAuth", "Apple Sign-In"],
     description:
-      "Multi-tenant Helpdesk 365 for Google and GCP tenants — Next.js frontend integrated with SharePoint backend, supporting isolated tenant configurations.",
+      "Multi-tenant Helpdesk 365 built with Next.js and SharePoint as the data layer — enabling cross-tenant get, post, update, and delete operations that standard SPFx cannot support (SPFx only surfaces data from the tenant where the solution is deployed).",
+    highlights: [
+      "Any tenant URL can be entered — after login via Microsoft (internal/external), Google, or Apple, the linked tenant's data is mapped and loaded",
+      "Tenant mapping connects external identity providers to the correct SharePoint tenant and Helpdesk data",
+      "Same Helpdesk 365 product experience with true multi-tenant, cross-tenant data access beyond SPFx limitations",
+    ],
   },
   {
     id: "helpdesk-hono",
-    name: "Helpdesk 365 (Hono API)",
+    name: "Helpdesk 365 (Next.js + PostgreSQL)",
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
-    tech: ["Next.js", "Hono", "PostgreSQL"],
+    tech: ["Next.js", "Hono", "PostgreSQL", "Azure App Service", "Azure Database for PostgreSQL"],
     description:
-      "Alternative Helpdesk 365 stack using Next.js with Hono API layer and PostgreSQL for data persistence and improved performance.",
+      "Helpdesk 365 variant built on Next.js with PostgreSQL — Hono runs as the API layer inside Next.js, replacing SharePoint as the data store for this architecture.",
+    highlights: [
+      "Next.js frontend with Hono API routes embedded inside the Next.js application",
+      "PostgreSQL on Azure Database for PostgreSQL — Flexible Server for data persistence",
+      "Deployed on Azure App Service — full Helpdesk product on a modern web stack",
+    ],
   },
   {
     id: "civic-365-spfx",
@@ -107,10 +117,15 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Sep 2023 – Feb 2026",
-    tech: ["Next.js", "Redux", "SharePoint", "SPFx"],
+    tech: ["Next.js", "Redux", "SharePoint", "Google Maps", "Microsoft Entra ID", "Google OAuth", "Apple Sign-In"],
     url: "https://civic365.ca/",
     description:
-      "Multi-tenant Civic 365 platform with SharePoint integration — handles tenant isolation, role-based access, and civic service workflows for government and local authorities.",
+      "Multi-tenant Civic 365 built with Next.js and SharePoint as the data layer — cross-tenant get, post, update, and delete for civic service data that standard SPFx cannot access across tenants.",
+    highlights: [
+      "Any tenant URL with Microsoft (internal/external), Google, or Apple login — linked tenant data mapped and loaded on authentication",
+      "Google Maps integration — pin a location on the map and assign a tenant to that geographic area",
+      "True multi-tenant civic workflows beyond SPFx single-tenant deployment limits",
+    ],
   },
   {
     id: "mail-tracker",
@@ -118,9 +133,15 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Oct 2024 – Nov 2024",
-    tech: ["Fastify.js", "PostgreSQL"],
+    tech: ["Fastify.js", "PostgreSQL", "React", "Encryption"],
     description:
-      "Email tracking system with Fastify.js REST API and PostgreSQL — tracks email delivery, opens, and engagement metrics.",
+      "Internal mail tracking tool built for Cubic Logics sales and marketing teams — tracks outbound client emails end to end, from send and delivery to opens, reads, and replies.",
+    highlights: [
+      "Tracks delivery status, read timestamps, read count, IP address, and location of each open",
+      "Captures who responded to the email and when — full engagement timeline for sales follow-ups",
+      "Data stored in encrypted format — viewable in the tool UI, downloadable in multiple formats, and shareable with managers or team leads",
+      "Built both the tracking API (Fastify.js + PostgreSQL) and the admin UI — later integrated into Helpdesk 365 and other Cubic Logics products",
+    ],
   },
   {
     id: "logs-module",
@@ -128,22 +149,14 @@ export const projects: Project[] = [
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
-    tech: ["SharePoint SPFx", "Node.js"],
+    tech: ["SharePoint SPFx", "Node.js", "Encryption"],
     description:
-      "Published reusable logger npm packages for structured logging across SPFx webparts and Node.js services.",
-  },
-  {
-    id: "reconsoeasy360",
-    name: "ReconSoEasy360 (Vendor Reconciliation)",
-    category: "Freelancing",
-    status: "Active",
-    tech: ["MongoDB", "Express.js", "AWS", "React"],
-    url: "https://vendor-reconciliation-forked.vercel.app/",
-    description:
-      "Vendor reconciliation software at Finsensor AI — automatically match vendor statements against ledger records, identify discrepancies with detailed reasons for mismatches, and generate instant reconciliation reports so books reflect the true financial position.",
+      "Internal log monitoring module for Cubic Logics SPFx solutions — tracks trace, error, info, and warning logs with permission-based access, retention policies, and secure storage.",
     highlights: [
-      "Complex backend for automated matching, variance detection, and financial data processing",
-      "Full AWS deployment with real-time reporting dashboards",
+      "Permission-wise log visibility — teams can configure who sees which log levels and sources",
+      "Download logs in multiple formats and share via email directly from the module",
+      "Log retention policies — configurable duration, automatic archival to zip, and scheduled cleanup",
+      "Published as reusable npm packages with encryption and security built in — used across SPFx webparts and Node.js services",
     ],
   },
   {
@@ -179,6 +192,20 @@ export const projects: Project[] = [
     highlights: [
       "Backend for RPT mapping, intercompany eliminations, and consolidation adjustments",
       "Supports regulatory compliance for related party disclosures under Companies Act and Ind AS",
+    ],
+  },
+  {
+    id: "reconsoeasy360",
+    name: "ReconSoEasy360 (Vendor Reconciliation)",
+    category: "Freelancing",
+    status: "Active",
+    tech: ["MongoDB", "Express.js", "AWS", "React"],
+    url: "https://vendor-reconciliation-forked.vercel.app/",
+    description:
+      "Vendor reconciliation software at Finsensor AI — automatically match vendor statements against ledger records, identify discrepancies with detailed reasons for mismatches, and generate instant reconciliation reports so books reflect the true financial position.",
+    highlights: [
+      "Complex backend for automated matching, variance detection, and financial data processing",
+      "Full AWS deployment with real-time reporting dashboards",
     ],
   },
   {
@@ -224,15 +251,6 @@ export const projects: Project[] = [
       "Additional client projects including financial data management tools and enterprise web applications.",
   },
   {
-    id: "weavify",
-    name: "Weavify UI Library",
-    category: "Personal",
-    status: "Active",
-    tech: ["React", "MUI", "Tailwind CSS"],
-    description:
-      "Reusable React UI component library built with Material-UI and Tailwind CSS to accelerate development and ensure design consistency across projects.",
-  },
-  {
     id: "personal-saas",
     name: "Personal HR SaaS (Multi-Organization)",
     category: "Personal",
@@ -263,6 +281,16 @@ export const projects: Project[] = [
       "Human Resource Management System built on SharePoint using SPFx — custom webparts for employee records, attendance tracking, and HR workflows within the SharePoint ecosystem.",
   },
   {
+    id: "weavify",
+    name: "Weavify UI Library",
+    category: "Personal",
+    status: "Active",
+    tech: ["React", "MUI", "Tailwind CSS"],
+    url: "https://www.npmjs.com/package/weavify",
+    description:
+      "Reusable React UI component library built with Material-UI and Tailwind CSS to accelerate development and ensure design consistency across projects.",
+  },
+  {
     id: "water-reminder",
     name: "Water Reminder Extension",
     category: "Learning",
@@ -290,3 +318,22 @@ export const freelanceProjects = projects.filter(
 );
 export const personalProjects = projects.filter((p) => p.category === "Personal");
 export const learningProjects = projects.filter((p) => p.category === "Learning");
+
+export const projectTabs = [
+  { id: "cubic", label: "Cubic Logics", category: "Cubic Logics" as const },
+  { id: "freelancing", label: "Freelancing", category: "Freelancing" as const },
+  { id: "personal", label: "Personal", category: "Personal" as const },
+  { id: "fun", label: "Fun / Learning", category: "Learning" as const },
+] as const;
+
+export type ProjectTabId = (typeof projectTabs)[number]["id"];
+
+export function getAllTech(): string[] {
+  const techSet = new Set<string>();
+  for (const project of projects) {
+    for (const t of project.tech) {
+      techSet.add(t);
+    }
+  }
+  return Array.from(techSet).sort();
+}

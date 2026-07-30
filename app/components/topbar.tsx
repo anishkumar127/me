@@ -15,12 +15,9 @@ const navItems = {
   "/projects": {
     name: "projects",
   },
-  // "/blog": {
-  //   name: "blog",
-  // },
-  // "/contact": {
-  //   name: "contact",
-  // },
+  "/blog": {
+    name: "blog",
+  },
 };
 
 export default function Topbar({ resumeLink }: { resumeLink?: string }) {
@@ -57,29 +54,34 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
             <span className="text-neutral-400 mx-2">·</span>
             <a
               href={`mailto:${site.email}`}
-              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300 truncate max-w-[200px] sm:max-w-none inline-block align-bottom"
             >
               {site.email}
             </a>
           </p>
         </div>
         <div className="relative flex items-center space-x-2 py-2 sm:py-0">
-          <SocialsLink href={site.github}>
+          <SocialsLink href={site.github} aria-label="GitHub profile">
             <GithubIcon />
           </SocialsLink>
-          <SocialsLink href={site.linkedin}>
+          <SocialsLink href={site.linkedin} aria-label="LinkedIn profile">
             <LinkedinIcon />
           </SocialsLink>
           <button
+            type="button"
             onClick={() => {
               setTheme(theme === "light" ? "dark" : "light");
             }}
+            aria-label="Toggle color theme"
             className="h-7 w-7 rounded-md hover:bg-gray-100 hover:dark:bg-[#1c1c1c] flex justify-center items-center"
           >
             <BrushIcon />
           </button>
           <button
+            type="button"
             onClick={toggleIsOpen}
+            aria-label="Toggle terminal"
+            aria-pressed={isOpen}
             className={clsx(
               "h-7 w-7 rounded-md hover:bg-gray-100 hover:dark:bg-[#1c1c1c] flex justify-center items-center",
               {
@@ -133,6 +135,7 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
             rel="noopener noreferrer"
             target="_blank"
             href={resumeLink}
+            aria-label="View resume on Google Drive"
           >
             resume
             <ResumeIcon />
