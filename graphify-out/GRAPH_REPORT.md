@@ -1,16 +1,16 @@
 # Graph Report - me  (2026-07-30)
 
 ## Corpus Check
-- 29 files · ~70,892 words
+- 29 files · ~71,098 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 163 nodes · 204 edges · 13 communities (9 shown, 4 thin omitted)
+- 163 nodes · 202 edges · 13 communities (9 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0f600bbb`
+- Built from commit: `7b872eb6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,8 +41,6 @@
 10. `about` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Page()` --calls--> `getAllTech()`  [EXTRACTED]
-  app/projects/page.tsx → data/projects.ts
 - `BlogPostPage()` --calls--> `getBlogPost()`  [EXTRACTED]
   templates/blog-post-page.tsx → data/blog.ts
 - `generateMetadata()` --calls--> `getBlogPost()`  [EXTRACTED]
@@ -70,8 +68,8 @@ Cohesion: 0.11
 Nodes (19): dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules (+11 more)
 
 ### Community 4 - "projects/page.tsx"
-Cohesion: 0.12
-Nodes (20): categoryLabels, categoryStyles, getLinkLabel(), ProjectCard(), matchesSearch(), ProjectsBrowser(), ProjectsBrowserProps, StatusFilter (+12 more)
+Cohesion: 0.11
+Nodes (18): categoryLabels, categoryStyles, getLinkLabel(), ProjectCard(), matchesSearch(), ProjectsBrowser(), ProjectsBrowserProps, StatusFilter (+10 more)
 
 ### Community 5 - "package.json"
 Cohesion: 0.22

@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ProjectCard from "./project-card";
 import type { Project, ProjectTabId } from "@/data/projects";
@@ -11,7 +11,6 @@ type StatusFilter = "All" | "Active" | "Completed";
 
 type ProjectsBrowserProps = {
   projects: Project[];
-  allTech: string[];
 };
 
 function matchesSearch(project: Project, query: string): boolean {
@@ -27,10 +26,7 @@ function matchesSearch(project: Project, query: string): boolean {
   return haystack.includes(query.toLowerCase());
 }
 
-export default function ProjectsBrowser({
-  projects,
-  allTech,
-}: ProjectsBrowserProps) {
+export default function ProjectsBrowser({ projects }: ProjectsBrowserProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -42,6 +38,7 @@ export default function ProjectsBrowser({
   const [search, setSearch] = useState("");
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("All");
+  const [techFilterOpen, setTechFilterOpen] = useState(false);
 
   const setTab = useCallback(
     (tabId: ProjectTabId) => {
@@ -52,13 +49,36 @@ export default function ProjectsBrowser({
     [router, searchParams],
   );
 
+  const activeCategory = projectTabs.find((t) => t.id === validTab)?.category;
+
+  const tabTech = useMemo(() => {
+    const techSet = new Set<string>();
+    for (const project of projects) {
+      if (activeCategory && project.category !== activeCategory) continue;
+      for (const t of project.tech) techSet.add(t);
+    }
+    return Array.from(techSet).sort();
+  }, [projects, activeCategory]);
+
+  useEffect(() => {
+    setSelectedTech([]);
+    setTechFilterOpen(false);
+  }, [validTab]);
+
   const toggleTech = (tech: string) => {
     setSelectedTech((prev) =>
       prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech],
     );
   };
 
-  const activeCategory = projectTabs.find((t) => t.id === validTab)?.category;
+  const hasActiveFilters =
+    search.length > 0 || statusFilter !== "All" || selectedTech.length > 0;
+
+  const clearFilters = () => {
+    setSearch("");
+    setStatusFilter("All");
+    setSelectedTech([]);
+  };
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -114,45 +134,94 @@ export default function ProjectsBrowser({
           className="w-full px-3 py-2 text-sm rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-neutral-400 dark:focus:ring-neutral-500"
         />
 
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs text-neutral-500">Status:</span>
-          {(["All", "Active", "Completed"] as const).map((status) => (
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs text-neutral-500">Status:</span>
+            {(["All", "Active", "Completed"] as const).map((status) => (
+              <button
+                key={status}
+                type="button"
+                onClick={() => setStatusFilter(status)}
+                className={clsx(
+                  "text-xs px-2 py-0.5 rounded-full border transition-colors",
+                  statusFilter === status
+                    ? "bg-neutral-800 text-white border-neutral-800 dark:bg-neutral-200 dark:text-black dark:border-neutral-200"
+                    : "border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400",
+                )}
+              >
+                {status}
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setTechFilterOpen((open) => !open)}
+            aria-expanded={techFilterOpen}
+            className={clsx(
+              "text-xs px-2 py-0.5 rounded-full border transition-colors",
+              techFilterOpen || selectedTech.length > 0
+                ? "bg-neutral-800 text-white border-neutral-800 dark:bg-neutral-200 dark:text-black dark:border-neutral-200"
+                : "border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400",
+            )}
+          >
+            Tech
+            {selectedTech.length > 0 ? ` (${selectedTech.length})` : ""}
+          </button>
+
+          {hasActiveFilters && (
             <button
-              key={status}
               type="button"
-              onClick={() => setStatusFilter(status)}
-              className={clsx(
-                "text-xs px-2 py-0.5 rounded-full border transition-colors",
-                statusFilter === status
-                  ? "bg-neutral-800 text-white border-neutral-800 dark:bg-neutral-200 dark:text-black dark:border-neutral-200"
-                  : "border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400",
-              )}
+              onClick={clearFilters}
+              className="text-xs text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-200 underline underline-offset-2"
             >
-              {status}
+              Clear filters
             </button>
-          ))}
+          )}
         </div>
 
-        <div className="flex flex-wrap gap-1.5">
-          {allTech.map((tech) => {
-            const isSelected = selectedTech.includes(tech);
-            return (
+        {techFilterOpen && (
+          <div className="rounded-md border border-neutral-200 dark:border-neutral-800 p-3 space-y-2">
+            <p className="text-xs text-neutral-500">
+              Technologies in this tab — select one or more
+            </p>
+            <div className="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto scrollcontainer">
+              {tabTech.map((tech) => {
+                const isSelected = selectedTech.includes(tech);
+                return (
+                  <button
+                    key={tech}
+                    type="button"
+                    onClick={() => toggleTech(tech)}
+                    className={clsx(
+                      "text-xs px-2 py-0.5 rounded-full border transition-colors",
+                      isSelected
+                        ? "bg-neutral-800 text-white border-neutral-800 dark:bg-neutral-200 dark:text-black dark:border-neutral-200"
+                        : "border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-neutral-400",
+                    )}
+                  >
+                    {tech}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {selectedTech.length > 0 && !techFilterOpen && (
+          <div className="flex flex-wrap gap-1.5">
+            {selectedTech.map((tech) => (
               <button
                 key={tech}
                 type="button"
                 onClick={() => toggleTech(tech)}
-                className={clsx(
-                  "text-xs rounded px-1.5 py-0.5 transition-colors",
-                  isSelected
-                    ? "bg-blue-600 text-white dark:bg-blue-500"
-                    : "text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700",
-                )}
+                className="text-xs px-2 py-0.5 rounded-full border border-neutral-800 bg-neutral-800 text-white dark:bg-neutral-200 dark:text-black dark:border-neutral-200"
               >
-                {tech}
+                {tech} ×
               </button>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <section role="tabpanel" aria-label={activeCategory}>

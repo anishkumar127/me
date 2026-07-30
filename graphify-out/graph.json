@@ -315,7 +315,7 @@
       "label": "matchesSearch()",
       "file_type": "code",
       "source_file": "app/components/projects-browser.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "app_components_projects_browser_matchessearch",
       "community": 4,
@@ -326,7 +326,7 @@
       "label": "ProjectsBrowser()",
       "file_type": "code",
       "source_file": "app/components/projects-browser.tsx",
-      "source_location": "L30",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "app_components_projects_browser_projectsbrowser",
       "community": 4,
@@ -2350,7 +2350,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/components/projects-browser.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_components_projects_browser",
@@ -2361,7 +2361,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/components/projects-browser.tsx",
-      "source_location": "L30",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_components_projects_browser",
@@ -2455,7 +2455,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/components/projects-browser.tsx",
-      "source_location": "L73",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_components_projects_browser_projectsbrowser",
@@ -2966,32 +2966,8 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_projects_page",
-      "target": "data_projects_getalltech",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/projects/page.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_projects_page",
       "target": "data_projects_projects",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/projects/page.tsx",
-      "source_location": "L25",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_projects_page_page",
-      "target": "data_projects_getalltech"
     },
     {
       "relation": "contains",
@@ -4137,5 +4113,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0f600bbb793f9e42aef78defe9f853e100afaf99"
+  "built_at_commit": "7b872eb657618ed98991b01eae4a17efa6f6f098"
 }

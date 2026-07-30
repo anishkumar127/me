@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ProjectsBrowser from "@/app/components/projects-browser";
-import { getAllTech, projects } from "@/data/projects";
+import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -22,7 +22,7 @@ export default function Page() {
           <p className="text-sm text-neutral-500">Loading projects...</p>
         }
       >
-        <ProjectsBrowser projects={projects} allTech={getAllTech()} />
+        <ProjectsBrowser projects={projects} />
       </Suspense>
     </div>
   );
