@@ -98,7 +98,7 @@ export default function ProjectsBrowser({ projects }: ProjectsBrowserProps) {
   return (
     <div className="space-y-5">
       <div
-        className="inline-flex flex-wrap items-center gap-1 rounded-lg border p-1 border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900/60"
+        className="inline-flex flex-nowrap sm:flex-wrap items-center gap-1 rounded-lg border p-1 border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900/60 tab-scroll overflow-x-auto max-w-full w-full"
         role="tablist"
         aria-label="Project categories"
       >
@@ -112,7 +112,7 @@ export default function ProjectsBrowser({ projects }: ProjectsBrowserProps) {
               aria-selected={isActive}
               onClick={() => setTab(tab.id)}
               className={clsx(
-                "px-3 py-1.5 rounded-md text-sm transition-all",
+                "px-3 py-1.5 rounded-md text-sm transition-all whitespace-nowrap shrink-0",
                 isActive
                   ? "bg-white text-black font-semibold shadow-sm border border-neutral-300 dark:bg-neutral-800 dark:text-white dark:border-neutral-600"
                   : "text-neutral-600 hover:text-black hover:bg-white/80 dark:text-neutral-500 dark:hover:text-neutral-200 dark:hover:bg-neutral-800",

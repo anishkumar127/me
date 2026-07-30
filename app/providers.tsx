@@ -17,8 +17,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="light"
+      enableSystem={false}
       disableTransitionOnChange
     >
       <TerminalContext.Provider value={{ isOpen, toggleIsOpen }}>

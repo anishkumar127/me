@@ -11,10 +11,21 @@ import { site } from "@/data/site";
 
 const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
+  display: "swap",
 });
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#111111" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  applicationName: site.metadata.title,
   title: {
     default: site.metadata.title,
     template: `%s | ${site.handle}`,
@@ -23,6 +34,14 @@ export const metadata: Metadata = {
   keywords: [...site.metadata.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
+  publisher: site.name,
+  category: "technology",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   robots: {
     index: true,
     follow: true,
@@ -64,6 +83,20 @@ export const metadata: Metadata = {
     creator: `@${site.handle}`,
     images: ["/og-image.png"],
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
+  ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+    ? {
+        other: {
+          "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({
@@ -72,9 +105,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={roboto_mono.className}>
+    <html lang="en" className={roboto_mono.className} suppressHydrationWarning>
       <head>
         <JsonLd />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary" />
       </head>
       <body className="antialiased min-h-screen">
         <Providers>

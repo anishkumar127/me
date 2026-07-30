@@ -8,10 +8,16 @@ import {
 import { about } from "@/data/about";
 import { education, workExperience } from "@/data/experience";
 import { site } from "@/data/site";
+import { canonicalUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About",
   description: site.metadata.description,
+  alternates: { canonical: canonicalUrl("/") },
+  openGraph: {
+    title: `About | ${site.handle}`,
+    url: canonicalUrl("/"),
+  },
 };
 
 export default function Page() {

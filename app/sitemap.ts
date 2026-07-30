@@ -1,25 +1,24 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
 import { site } from "@/data/site";
+import { canonicalUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = site.url;
-
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: canonicalUrl("/"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: canonicalUrl("/projects"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: canonicalUrl("/blog"),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
@@ -27,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: canonicalUrl(`/blog/${post.slug}`),
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,

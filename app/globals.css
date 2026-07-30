@@ -4,12 +4,13 @@
 
 @layer base {
   body {
-    @apply dark:bg-[#111111] bg-white dark:text-white text-black;
+    @apply dark:bg-[#111111] bg-white dark:text-white text-black overflow-x-hidden;
   }
 }
 
 html {
-  min-width: 360px;
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -28,8 +29,15 @@ html {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
 .scrollcontainer::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 .scrollcontainer::-webkit-scrollbar-track {
@@ -38,4 +46,14 @@ html {
 
 .scrollcontainer::-webkit-scrollbar-thumb {
   @apply rounded-md bg-zinc-200 dark:bg-[#212121];
+}
+
+/* Hide scrollbar on horizontal tab strips (mobile) */
+.tab-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tab-scroll::-webkit-scrollbar {
+  display: none;
 }

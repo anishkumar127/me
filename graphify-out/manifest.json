@@ -30,28 +30,28 @@
     "semantic_hash": ""
   },
   "app/components/topbar.tsx": {
-    "mtime": 1785398542.3993475,
-    "ast_hash": "05749a867133d56877d64f8850710871",
+    "mtime": 1785400739.684355,
+    "ast_hash": "3c1fb79055dfbc1321c1ff1def111a15",
     "semantic_hash": ""
   },
   "app/layout.tsx": {
-    "mtime": 1785398749.7323146,
-    "ast_hash": "d5564100cf8341c6a03b6fd628c82247",
+    "mtime": 1785400714.8781922,
+    "ast_hash": "d5567a0e0ccf5f84c9950e61aae977fd",
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1785399056.2624478,
-    "ast_hash": "396c4269d3ff4122a92c83ddceb3af13",
+    "mtime": 1785400716.063189,
+    "ast_hash": "2945c9c8f47668d7cbc10187d7149f12",
     "semantic_hash": ""
   },
   "app/projects/page.tsx": {
-    "mtime": 1785400391.3865545,
-    "ast_hash": "cc51ec00ab1df7cd4e23f487a943ae22",
+    "mtime": 1785400718.3335013,
+    "ast_hash": "a675947dfeb8a08971e01f14bf102e08",
     "semantic_hash": ""
   },
   "app/providers.tsx": {
-    "mtime": 1785389440.072378,
-    "ast_hash": "1c2f196a303784b8e305e207efed4130",
+    "mtime": 1785400701.8551042,
+    "ast_hash": "0bd9a20c1e1281fa6b3644c405b9aaa5",
     "semantic_hash": ""
   },
   "data/about.ts": {
@@ -70,13 +70,13 @@
     "semantic_hash": ""
   },
   "data/site.ts": {
-    "mtime": 1785398456.7881813,
-    "ast_hash": "335c0c84e524474086eb0ad96a64513a",
+    "mtime": 1785400671.8413281,
+    "ast_hash": "0431244f8b3726b913532d8d31ebd8c1",
     "semantic_hash": ""
   },
   "next.config.js": {
-    "mtime": 1785389440.0733814,
-    "ast_hash": "fedc1e55d463d13588468d5b882439ca",
+    "mtime": 1785400669.7925837,
+    "ast_hash": "ba16b5ad872fb033d5ef15083cb2f92e",
     "semantic_hash": ""
   },
   "package.json": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "app/blog/page.tsx": {
-    "mtime": 1785398519.504969,
-    "ast_hash": "aa693d3b342f9696acf7002a957d0412",
+    "mtime": 1785400722.1615973,
+    "ast_hash": "5e94afc96da6bd1e6d5a3baab5018d31",
     "semantic_hash": ""
   },
   "app/components/analytics.tsx": {
@@ -145,18 +145,18 @@
     "semantic_hash": ""
   },
   "app/components/json-ld.tsx": {
-    "mtime": 1785398511.4462345,
-    "ast_hash": "52b976ea8950db806622ca32a156f62a",
+    "mtime": 1785400680.158562,
+    "ast_hash": "5a338cf6df421fadf62d3276ec73ec85",
     "semantic_hash": ""
   },
   "app/components/projects-browser.tsx": {
-    "mtime": 1785400388.666642,
-    "ast_hash": "5326fad4cf15d40715a400184a961e57",
+    "mtime": 1785400733.3132613,
+    "ast_hash": "5bab804bd59d36a9d323bc05385b6d86",
     "semantic_hash": ""
   },
   "app/sitemap.ts": {
-    "mtime": 1785398513.878879,
-    "ast_hash": "2e37ec2cc847c70d9c0a7218c985021a",
+    "mtime": 1785400686.1269279,
+    "ast_hash": "49f9f39cfb251195c26f8f0f573c80f7",
     "semantic_hash": ""
   },
   "data/blog.ts": {
@@ -170,13 +170,13 @@
     "semantic_hash": ""
   },
   "public/llms.txt": {
-    "mtime": 1785398550.1899807,
-    "ast_hash": "8766f4666fb0c7acb32ce3f2e452560c",
+    "mtime": 1785400702.8591588,
+    "ast_hash": "a5f6388abdfba77c266461c6c70662bc",
     "semantic_hash": ""
   },
   "public/robots.txt": {
-    "mtime": 1785398896.0686097,
-    "ast_hash": "6c8da05af64f29fe01f9d74f7437cd4b",
+    "mtime": 1785400695.5243075,
+    "ast_hash": "cb95cee676031fcd44d4538580f6545b",
     "semantic_hash": ""
   },
   "public/favicon.svg": {
@@ -187,6 +187,31 @@
   "public/og-image.png": {
     "mtime": 1785398754.1889386,
     "ast_hash": "9a3e3e1a7c9625e42a00f51530fc7ab4",
+    "semantic_hash": ""
+  },
+  "app/manifest.ts": {
+    "mtime": 1785400675.680462,
+    "ast_hash": "c0814de7ad9abd3680b5f7c1b148c6f7",
+    "semantic_hash": ""
+  },
+  "lib/seo.ts": {
+    "mtime": 1785400668.8114915,
+    "ast_hash": "e756d7336411ded7526a78213fbe4e6c",
+    "semantic_hash": ""
+  },
+  "vercel.json": {
+    "mtime": 1785400703.6301663,
+    "ast_hash": "b344cc22a8efc86ba56a5aac1c99f525",
+    "semantic_hash": ""
+  },
+  "amplify.yml": {
+    "mtime": 1785400704.4173121,
+    "ast_hash": "5f68b5bcdb4ff2945235a10e61a94c50",
+    "semantic_hash": ""
+  },
+  "public/ai.txt": {
+    "mtime": 1785400686.772681,
+    "ast_hash": "09055359305680553290c0d9aa6aa641",
     "semantic_hash": ""
   }
 }
