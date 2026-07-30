@@ -102,14 +102,15 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "civic-375",
-    name: "Civic 375 (Multi-Tenant)",
+    id: "civic-365-multitenant",
+    name: "Civic 365 (Multi-Tenant)",
     category: "Cubic Logics",
     status: "Completed",
     period: "Sep 2023 – Feb 2026",
     tech: ["Next.js", "Redux", "SharePoint", "SPFx"],
+    url: "https://civic365.ca/",
     description:
-      "Multi-tenant civic management application with SharePoint integration — handles tenant isolation, role-based access, and civic service workflows.",
+      "Multi-tenant Civic 365 platform with SharePoint integration — handles tenant isolation, role-based access, and civic service workflows for government and local authorities.",
   },
   {
     id: "mail-tracker",

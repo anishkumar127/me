@@ -23,7 +23,7 @@ export const about = {
   achievements: [
     "Built Helpdesk 365 (Microsoft Marketplace, 4.9★) and Helpdesk 365 Add-ons — SPFx/Teams ticketing product used by SMEs across M365",
     "Extended Helpdesk 365 across multi-tenant (Google/GCP) and Next.js + Hono + PostgreSQL architectures",
-    "Delivered Civic 365 (Microsoft Marketplace 311 CRM) and Civic 375 multi-tenant application with SharePoint integration",
+    "Delivered Civic 365 (Microsoft Marketplace 311 CRM) and Civic 365 multi-tenant platform with SharePoint integration",
     "Shipped production Finsensor AI tools — FinSoEasy360, ReconSoEasy360, RPTsoEasy360, and FAMsoEasy360 — with complex MongoDB/PostgreSQL backends on AWS",
     "Independently developed and deployed OMSSoEasy360 (HRMS), FAMsoEasy360, and FP&A financial tools",
     "Created Weavify — reusable React UI component library (MUI + Tailwind CSS)",
