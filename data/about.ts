@@ -1,4 +1,6 @@
 export const about = {
+  hook: "3+ years building production apps for Microsoft 365, fintech, and HR — full stack from UI to AWS.",
+
   intro: `Full Stack Developer with 3+ years of experience, previously at Cubic Logics (apps365.com). I build end-to-end web applications — from SharePoint SPFx webparts and multi-tenant SaaS platforms to complex Node.js backends with MongoDB and PostgreSQL, deployed on AWS. I take ownership across frontend, backend, database design, and deployment.`,
 
   easterEgg:
@@ -14,7 +16,7 @@ export const about = {
 
   strengths: [
     "End-to-end ownership: UI design, backend architecture, DB schema, and cloud deployment",
-    "Hybrid stack: MERN + SharePoint/SPFx — enterprise and modern web in one skillset",
+    "Hybrid stack: full stack + SharePoint/SPFx — enterprise and modern web in one skillset",
     "Complex backend development: multi-tenant logic, financial data processing, report generation",
     "Published npm packages (logger modules) and built own UI library (Weavify)",
     "Building a multi-organization HR SaaS for market launch — web and React Native mobile, solo end to end",

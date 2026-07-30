@@ -26,7 +26,7 @@ export default function Page() {
         <ul className="space-y-3">
           {cubicProjects.map((project) => (
             <li key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} hideCategory />
             </li>
           ))}
         </ul>
@@ -37,7 +37,7 @@ export default function Page() {
         <ul className="space-y-3">
           {freelanceProjects.map((project) => (
             <li key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} hideCategory />
             </li>
           ))}
         </ul>
@@ -48,7 +48,7 @@ export default function Page() {
         <ul className="space-y-3">
           {personalProjects.map((project) => (
             <li key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} hideCategory />
             </li>
           ))}
         </ul>
@@ -59,7 +59,7 @@ export default function Page() {
         <ul className="space-y-3">
           {learningProjects.map((project) => (
             <li key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} hideCategory />
             </li>
           ))}
         </ul>

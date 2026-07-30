@@ -44,12 +44,15 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
               {site.company}
             </Link>
           </p>
+          <p className="text-sm text-green-700 dark:text-green-400 mt-1">
+            {site.openToWork}
+          </p>
           <p className="text-sm mt-1">
             <a
               href={`tel:${site.phone}`}
               className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
             >
-              {site.phone}
+              {site.phoneDisplay}
             </a>
             <span className="text-neutral-400 mx-2">·</span>
             <a
@@ -97,19 +100,26 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
           ></div>
         </div>
       </div>
-      <nav className="mb-6 flex justify-between items-center">
-        <div className="flex flex-row space-x-4">
+      <nav className="mb-6 flex flex-wrap justify-between items-center gap-3">
+        <div
+          className="inline-flex items-center gap-1 rounded-lg border p-1 border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900/60"
+          role="tablist"
+          aria-label="Site navigation"
+        >
           {Object.entries(navItems).map(([path, { name }]) => {
             const isActive = path === pathname;
             return (
               <Link
                 key={path}
                 href={path}
+                role="tab"
+                aria-selected={isActive}
+                aria-current={isActive ? "page" : undefined}
                 className={clsx(
-                  "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle",
-                  {
-                    "text-neutral-500": !isActive,
-                  },
+                  "px-3 py-1.5 rounded-md text-sm transition-all capitalize",
+                  isActive
+                    ? "bg-white text-black font-semibold shadow-sm border border-neutral-300 dark:bg-neutral-800 dark:text-white dark:border-neutral-600"
+                    : "text-neutral-600 hover:text-black hover:bg-white/80 dark:text-neutral-500 dark:hover:text-neutral-200 dark:hover:bg-neutral-800",
                 )}
               >
                 {name}
@@ -119,16 +129,15 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
         </div>
         {resumeLink ? (
           <a
-            className="underline underline-offset-4"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm border border-neutral-300 bg-neutral-100 hover:bg-white dark:border-neutral-700 dark:bg-neutral-900/60 dark:hover:bg-neutral-800 transition-colors capitalize"
             rel="noopener noreferrer"
             target="_blank"
             href={resumeLink}
           >
             resume
+            <ResumeIcon />
           </a>
-        ) : (
-          <span className="text-neutral-400 text-sm">resume</span>
-        )}
+        ) : null}
       </nav>
     </header>
   );
@@ -202,6 +211,28 @@ function LinkedinIcon() {
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
       <rect width="4" height="12" x="2" y="9" />
       <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+function ResumeIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="shrink-0 opacity-70"
+      aria-hidden="true"
+    >
+      <path d="M15 3h6v6" />
+      <path d="M10 14 21 3" />
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     </svg>
   );
 }
