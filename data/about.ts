@@ -17,7 +17,7 @@ export const about = {
     "Hybrid stack: MERN + SharePoint/SPFx — enterprise and modern web in one skillset",
     "Complex backend development: multi-tenant logic, financial data processing, report generation",
     "Published npm packages (logger modules) and built own UI library (Weavify)",
-    "Building personal products solo — web (Vite + React + Fastify + PostgreSQL + AWS) and mobile (React Native Expo)",
+    "Building a multi-organization HR SaaS for market launch — web and React Native mobile, solo end to end",
   ],
 
   achievements: [

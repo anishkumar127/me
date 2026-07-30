@@ -179,7 +179,7 @@ export const projects: Project[] = [
   },
   {
     id: "personal-saas",
-    name: "Personal SaaS Products",
+    name: "Personal HR SaaS (Multi-Organization)",
     category: "Personal",
     status: "Active",
     tech: [
@@ -191,7 +191,12 @@ export const projects: Project[] = [
       "React Native Expo",
     ],
     description:
-      "Independently building full-stack web applications and mobile apps (React Native Expo) — handling UI design, backend, database, and cloud deployment solo.",
+      "Solo-built HR platform preparing for market launch — multi-organization SaaS with employee directory, leave management, timesheets, payroll, performance management, employee onboarding, and recruitment management. Full web app plus React Native mobile app, end to end.",
+    highlights: [
+      "Multi-tenant architecture — separate orgs, roles, and data isolation",
+      "Web (Vite + React + Fastify + PostgreSQL) and mobile (React Native Expo)",
+      "Solo development: UI/UX, backend APIs, database design, and AWS deployment",
+    ],
   },
   {
     id: "hrms-spfx",
