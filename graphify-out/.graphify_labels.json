@@ -1,0 +1,14 @@
+{
+  "0": "dependencies",
+  "1": "topbar.tsx",
+  "2": "app/page.tsx",
+  "3": "compilerOptions",
+  "4": "projects/page.tsx",
+  "5": "package.json",
+  "6": "include",
+  "7": ".eslintrc.json",
+  "8": "next.config.js",
+  "9": "README.md",
+  "10": "tailwind.config.ts",
+  "11": "postcss.config.js"
+}
