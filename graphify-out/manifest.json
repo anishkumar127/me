@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "app/components/project-card.tsx": {
-    "mtime": 1785393352.6421354,
-    "ast_hash": "60c37efdf3400d7062c54c40a73fb0bc",
+    "mtime": 1785393885.5940464,
+    "ast_hash": "3e2466b3e2f6a64b5073c7bae65f32d4",
     "semantic_hash": ""
   },
   "app/components/section-heading.tsx": {
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "app/projects/page.tsx": {
-    "mtime": 1785390868.9999855,
-    "ast_hash": "985eec6df3447482f021a6f1f62d1d25",
+    "mtime": 1785393888.7590551,
+    "ast_hash": "eeb0a1b255a4f84c7bc3a36beaba885c",
     "semantic_hash": ""
   },
   "app/providers.tsx": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "data/projects.ts": {
-    "mtime": 1785393345.5391662,
-    "ast_hash": "0cfe9403996a5ad40c57555f147ad389",
+    "mtime": 1785393882.8082254,
+    "ast_hash": "69c1a3ec89e5e864a36380af61ccae49",
     "semantic_hash": ""
   },
   "data/site.ts": {

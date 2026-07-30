@@ -1,16 +1,16 @@
 # Graph Report - me  (2026-07-30)
 
 ## Corpus Check
-- 21 files · ~4,322 words
+- 21 files · ~4,508 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 130 nodes · 151 edges · 12 communities (8 shown, 4 thin omitted)
+- 132 nodes · 154 edges · 12 communities (8 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5cd7edfc`
+- Built from commit: `60e9f824`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,8 +64,8 @@ Cohesion: 0.11
 Nodes (19): dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules (+11 more)
 
 ### Community 4 - "projects/page.tsx"
-Cohesion: 0.20
-Nodes (9): categoryStyles, SectionHeading(), metadata, cubicProjects, freelanceProjects, personalProjects, Project, ProjectCategory (+1 more)
+Cohesion: 0.18
+Nodes (11): categoryLabels, categoryStyles, SectionHeading(), metadata, cubicProjects, freelanceProjects, learningProjects, personalProjects (+3 more)
 
 ### Community 5 - "package.json"
 Cohesion: 0.22
@@ -76,7 +76,7 @@ Cohesion: 0.25
 Nodes (7): next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx, exclude, include
 
 ## Knowledge Gaps
-- **58 isolated node(s):** `extends`, `next/core-web-vitals`, `categoryStyles`, `commands`, `routes` (+53 more)
+- **59 isolated node(s):** `extends`, `next/core-web-vitals`, `categoryStyles`, `categoryLabels`, `commands` (+54 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -84,13 +84,13 @@ Nodes (7): next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx, 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
 - **Why does `site` connect `topbar.tsx` to `app/page.tsx`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
-- **Why does `compilerOptions` connect `compilerOptions` to `include`?**
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Why does `SectionHeading()` connect `projects/page.tsx` to `app/page.tsx`?**
   _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **What connects `extends`, `next/core-web-vitals`, `categoryStyles` to the rest of the system?**
-  _58 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _59 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `topbar.tsx` be split into smaller, more focused modules?**

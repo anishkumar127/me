@@ -1,4 +1,8 @@
-export type ProjectCategory = "Cubic Logics" | "Freelancing" | "Personal";
+export type ProjectCategory =
+  | "Cubic Logics"
+  | "Freelancing"
+  | "Personal"
+  | "Learning";
 
 export type Project = {
   id: string;
@@ -155,6 +159,35 @@ export const projects: Project[] = [
     description:
       "Independently building full-stack web applications and mobile apps (React Native Expo) — handling UI design, backend, database, and cloud deployment solo.",
   },
+  {
+    id: "hrms-spfx",
+    name: "HRMS (SharePoint SPFx)",
+    category: "Personal",
+    status: "Completed",
+    tech: ["SharePoint", "SPFx", "React.js", "Fluent UI", "TypeScript"],
+    description:
+      "Human Resource Management System built on SharePoint using SPFx — custom webparts for employee records, attendance tracking, and HR workflows within the SharePoint ecosystem.",
+  },
+  {
+    id: "water-reminder",
+    name: "Water Reminder Extension",
+    category: "Learning",
+    status: "Completed",
+    tech: ["Chrome Extension", "JavaScript", "HTML", "CSS"],
+    url: "https://github.com/anishkumar127/water-reminder-extension",
+    description:
+      "Chrome extension that sends periodic reminders to drink water — built as a fun side project to learn browser extension APIs and background scripts.",
+  },
+  {
+    id: "password-manager",
+    name: "Password Manager",
+    category: "Learning",
+    status: "Completed",
+    tech: ["React Native", "JavaScript", "AsyncStorage"],
+    url: "https://github.com/anishkumar127/password-manager",
+    description:
+      "Mobile password manager app built with React Native — stores credentials securely on device, built as a learning project to explore mobile app development.",
+  },
 ];
 
 export const cubicProjects = projects.filter((p) => p.category === "Cubic Logics");
@@ -162,3 +195,4 @@ export const freelanceProjects = projects.filter(
   (p) => p.category === "Freelancing",
 );
 export const personalProjects = projects.filter((p) => p.category === "Personal");
+export const learningProjects = projects.filter((p) => p.category === "Learning");

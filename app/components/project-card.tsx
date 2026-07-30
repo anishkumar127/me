@@ -8,6 +8,15 @@ const categoryStyles: Record<ProjectCategory, string> = {
     "text-amber-600 dark:text-amber-400 bg-amber-500/10",
   Personal:
     "text-purple-600 dark:text-purple-400 bg-purple-500/10",
+  Learning:
+    "text-pink-600 dark:text-pink-400 bg-pink-500/10",
+};
+
+const categoryLabels: Record<ProjectCategory, string> = {
+  "Cubic Logics": "Cubic Logics",
+  Freelancing: "Freelancing",
+  Personal: "Personal",
+  Learning: "Fun / Learning",
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -39,7 +48,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             categoryStyles[project.category],
           )}
         >
-          {project.category}
+          {categoryLabels[project.category]}
         </span>
         {project.period && (
           <span className="text-xs text-neutral-400">{project.period}</span>

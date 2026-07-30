@@ -4,6 +4,7 @@ import SectionHeading from "@/app/components/section-heading";
 import {
   cubicProjects,
   freelanceProjects,
+  learningProjects,
   personalProjects,
 } from "@/data/projects";
 
@@ -46,6 +47,17 @@ export default function Page() {
         <SectionHeading>Personal</SectionHeading>
         <ul className="space-y-3">
           {personalProjects.map((project) => (
+            <li key={project.id}>
+              <ProjectCard project={project} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <SectionHeading>Fun / Learning</SectionHeading>
+        <ul className="space-y-3">
+          {learningProjects.map((project) => (
             <li key={project.id}>
               <ProjectCard project={project} />
             </li>
