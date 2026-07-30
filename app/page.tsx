@@ -22,15 +22,15 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="space-y-6 text-sm">
+    <div className="space-y-6 text-base sm:text-sm leading-relaxed">
       <section>
-        <p className="text-neutral-600 dark:text-neutral-400 font-medium">
+        <p className="text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed">
           {about.hook}
         </p>
       </section>
 
       <section>
-        <p className="text-justify">
+        <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
           Hi, I&apos;m {site.name}, a {site.title} based in{" "}
           {site.workLocation}. {about.intro} <EasterEgg />
         </p>
@@ -38,7 +38,7 @@ export default function Page() {
 
       <section>
         <SectionHeading>What I build</SectionHeading>
-        <ul className="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400">
+        <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {about.whatIDo.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -47,7 +47,7 @@ export default function Page() {
 
       <section>
         <SectionHeading>Strengths</SectionHeading>
-        <ul className="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400">
+        <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {about.strengths.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -66,7 +66,7 @@ export default function Page() {
 
       <section>
         <SectionHeading>Selected achievements</SectionHeading>
-        <ul className="list-disc list-inside space-y-1 text-neutral-600 dark:text-neutral-400">
+        <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {about.achievements.map((item) => (
             <li key={item}>{item}</li>
           ))}

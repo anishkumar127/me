@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import Topbar from "./components/topbar";
 import Providers from "./providers";
 import Terminal from "./components/terminal";
@@ -9,9 +9,16 @@ import { Analytics } from "./components/analytics";
 import { JsonLd } from "./components/json-ld";
 import { site } from "@/data/site";
 
-const roboto_mono = Roboto_Mono({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-sans",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 export const viewport = {
@@ -105,7 +112,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={roboto_mono.className} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${robotoMono.variable} font-sans`}
+      suppressHydrationWarning
+    >
       <head>
         <JsonLd />
         <link rel="alternate" type="text/plain" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/llms.txt`} title="LLM summary" />

@@ -29,7 +29,7 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
     <header>
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
         <div>
-          <h1 className="font-bold text-xl">anish kumar</h1>
+          <h1 className="font-mono font-bold text-xl">anish kumar</h1>
           <p className="text-sm text-neutral-500">
             {site.title} · Previously at{" "}
             <Link

@@ -1,16 +1,16 @@
 # Graph Report - me  (2026-07-30)
 
 ## Corpus Check
-- 32 files · ~71,260 words
+- 32 files · ~71,307 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 176 nodes · 230 edges · 15 communities (11 shown, 4 thin omitted)
+- 177 nodes · 231 edges · 15 communities (11 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0f50008f`
+- Built from commit: `046a55eb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -63,7 +63,7 @@ Nodes (29): autoprefixer, clsx, eslint, eslint-config-next, next, next-themes, d
 
 ### Community 1 - "topbar.tsx"
 Cohesion: 0.09
-Nodes (11): Analytics(), Footer(), commands, helpCommand, routes, navItems, metadata, roboto_mono (+3 more)
+Nodes (12): Analytics(), Footer(), commands, helpCommand, routes, navItems, inter, metadata (+4 more)
 
 ### Community 2 - "app/page.tsx"
 Cohesion: 0.18
@@ -98,7 +98,7 @@ Cohesion: 0.47
 Nodes (4): getBlogPost(), BlogPostPage(), generateMetadata(), Props
 
 ## Knowledge Gaps
-- **74 isolated node(s):** `extends`, `next/core-web-vitals`, `metadata`, `categoryStyles`, `categoryLabels` (+69 more)
+- **75 isolated node(s):** `extends`, `next/core-web-vitals`, `metadata`, `categoryStyles`, `categoryLabels` (+70 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -106,16 +106,16 @@ Nodes (4): getBlogPost(), BlogPostPage(), generateMetadata(), Props
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `site` connect `blog-post-page.tsx` to `topbar.tsx`, `app/page.tsx`?**
-  _High betweenness centrality (0.079) - this node is a cross-community bridge._
+  _High betweenness centrality (0.080) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
   _High betweenness centrality (0.044) - this node is a cross-community bridge._
 - **Why does `canonicalUrl()` connect `blog-post-page.tsx` to `app/page.tsx`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **What connects `extends`, `next/core-web-vitals`, `metadata` to the rest of the system?**
-  _74 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _75 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `topbar.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.08994708994708994 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08620689655172414 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

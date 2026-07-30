@@ -78,7 +78,7 @@ export default function Terminal() {
   if (!isOpen) return null;
   return (
     <div
-      className="relative h-60 mb-6 bg-gray-100 dark:bg-[#171717] rounded-md text-xs overflow-hidden flex flex-col"
+      className="relative h-60 mb-6 bg-gray-100 dark:bg-[#171717] rounded-md text-xs overflow-hidden flex flex-col font-mono"
       onClick={() => inputRef.current?.focus()}
     >
       <div className="sticky top-0 left-0 right-0 h-6 bg-zinc-300 dark:bg-[#323232] flex pl-2 ">

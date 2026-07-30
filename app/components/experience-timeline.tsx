@@ -19,8 +19,8 @@ function TimelineItem({
   return (
     <li className="relative pl-4 border-l border-neutral-200 dark:border-neutral-700 pb-4 last:pb-0">
       <div className="absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-neutral-300 dark:bg-neutral-600" />
-      <p className="text-sm font-medium">{title}</p>
-      <p className="text-xs text-neutral-500">
+      <p className="text-sm font-medium leading-snug">{title}</p>
+      <p className="text-xs text-neutral-500 leading-relaxed">
         {url ? (
           <Link
             href={url}
