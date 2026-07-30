@@ -23,7 +23,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         >
           {project.name}
         </span>
-        <span className="tracking-tighter text-xs font-medium text-blue-500 bg-blue-500/10 rounded-full px-2 py-0.5">
+        <span
+          className={clsx(
+            "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
+            project.status === "Active"
+              ? "text-blue-500 bg-blue-500/10"
+              : "text-neutral-500 bg-neutral-500/10",
+          )}
+        >
           {project.status}
         </span>
         <span

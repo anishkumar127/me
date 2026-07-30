@@ -1,5 +1,5 @@
 export const about = {
-  intro: `Full Stack Developer with 3+ years of experience, currently at Cubic Logics (apps365.com). I build end-to-end web applications — from SharePoint SPFx webparts and multi-tenant SaaS platforms to complex Node.js backends deployed on AWS. I take ownership across frontend, backend, database design, and deployment.`,
+  intro: `Full Stack Developer with 3+ years of experience, previously at Cubic Logics (apps365.com). I build end-to-end web applications — from SharePoint SPFx webparts and multi-tenant SaaS platforms to complex Node.js backends with MongoDB and PostgreSQL, deployed on AWS. I take ownership across frontend, backend, database design, and deployment.`,
 
   easterEgg:
     "Passionate about leveraging modern web technologies to solve complex problems and deliver exceptional user experiences.",
@@ -33,6 +33,8 @@ export const about = {
     Frontend: [
       "React.js",
       "Next.js",
+      "React Native",
+      "React Native Expo",
       "Redux",
       "zustand",
       "SPFx",

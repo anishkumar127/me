@@ -1,16 +1,16 @@
 # Graph Report - me  (2026-07-30)
 
 ## Corpus Check
-- 21 files · ~4,388 words
+- 21 files · ~4,322 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 132 nodes · 151 edges · 12 communities (8 shown, 4 thin omitted)
+- 130 nodes · 151 edges · 12 communities (8 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a82413d5`
+- Built from commit: `5cd7edfc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,12 +31,12 @@
 1. `compilerOptions` - 16 edges
 2. `scripts` - 5 edges
 3. `include` - 5 edges
-4. `lib` - 4 edges
-5. `EasterEgg()` - 3 edges
-6. `SectionHeading()` - 3 edges
-7. `TerminalContext` - 3 edges
-8. `about` - 3 edges
-9. `site` - 3 edges
+4. `site` - 4 edges
+5. `lib` - 4 edges
+6. `EasterEgg()` - 3 edges
+7. `SectionHeading()` - 3 edges
+8. `TerminalContext` - 3 edges
+9. `about` - 3 edges
 10. `useTypingEffect()` - 2 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -52,12 +52,12 @@ Cohesion: 0.07
 Nodes (29): autoprefixer, clsx, eslint, eslint-config-next, next, next-themes, dependencies, autoprefixer (+21 more)
 
 ### Community 1 - "topbar.tsx"
-Cohesion: 0.11
-Nodes (8): commands, helpCommand, routes, navItems, metadata, roboto_mono, Providers(), TerminalContext
+Cohesion: 0.12
+Nodes (9): commands, helpCommand, routes, navItems, metadata, roboto_mono, Providers(), TerminalContext (+1 more)
 
 ### Community 2 - "app/page.tsx"
-Cohesion: 0.18
-Nodes (11): EasterEgg(), useTypingEffect(), EducationTimeline(), ExperienceTimeline(), metadata, about, education, EducationEntry (+3 more)
+Cohesion: 0.21
+Nodes (10): EasterEgg(), useTypingEffect(), EducationTimeline(), ExperienceTimeline(), metadata, about, education, EducationEntry (+2 more)
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.11
@@ -84,16 +84,16 @@ Nodes (7): next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx, 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.072) - this node is a cross-community bridge._
-- **Why does `site` connect `app/page.tsx` to `topbar.tsx`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `site` connect `topbar.tsx` to `app/page.tsx`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `compilerOptions` connect `compilerOptions` to `include`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **What connects `extends`, `next/core-web-vitals`, `categoryStyles` to the rest of the system?**
   _58 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
 - **Should `topbar.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.1067193675889328 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11857707509881422 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._

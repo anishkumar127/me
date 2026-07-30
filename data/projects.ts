@@ -17,8 +17,8 @@ export const projects: Project[] = [
     id: "helpdesk-spfx",
     name: "Helpdesk 365 (SPFx)",
     category: "Cubic Logics",
-    status: "Active",
-    period: "Mar 2023 – Present",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
     tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI"],
     description:
       "Built the complete Helpdesk 365 solution in SharePoint using SPFx — custom webparts, Fluent UI components, and Redux state management for ticket management workflows.",
@@ -27,8 +27,8 @@ export const projects: Project[] = [
     id: "helpdesk-multitenant",
     name: "Helpdesk 365 Multi-Tenant",
     category: "Cubic Logics",
-    status: "Active",
-    period: "Jan 2025 – Present",
+    status: "Completed",
+    period: "Jan 2025 – Feb 2026",
     tech: ["Next.js", "SharePoint", "PostgreSQL"],
     description:
       "Multi-tenant Helpdesk 365 for Google and GCP tenants — Next.js frontend integrated with SharePoint backend, supporting isolated tenant configurations.",
@@ -37,7 +37,8 @@ export const projects: Project[] = [
     id: "helpdesk-hono",
     name: "Helpdesk 365 (Hono API)",
     category: "Cubic Logics",
-    status: "Active",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
     tech: ["Next.js", "Hono", "PostgreSQL"],
     description:
       "Alternative Helpdesk 365 stack using Next.js with Hono API layer and PostgreSQL for data persistence and improved performance.",
@@ -46,8 +47,8 @@ export const projects: Project[] = [
     id: "civic-375",
     name: "Civic 375 (Multi-Tenant)",
     category: "Cubic Logics",
-    status: "Active",
-    period: "Sep 2023 – Present",
+    status: "Completed",
+    period: "Sep 2023 – Feb 2026",
     tech: ["Next.js", "Redux", "SharePoint", "SPFx"],
     description:
       "Multi-tenant civic management application with SharePoint integration — handles tenant isolation, role-based access, and civic service workflows.",
@@ -66,7 +67,8 @@ export const projects: Project[] = [
     id: "logs-module",
     name: "Logs Module (npm packages)",
     category: "Cubic Logics",
-    status: "Active",
+    status: "Completed",
+    period: "Mar 2023 – Feb 2026",
     tech: ["SharePoint SPFx", "Node.js"],
     description:
       "Published reusable logger npm packages for structured logging across SPFx webparts and Node.js services.",

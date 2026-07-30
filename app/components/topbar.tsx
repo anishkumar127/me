@@ -6,6 +6,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useContext } from "react";
 import { TerminalContext } from "../providers";
+import { site } from "@/data/site";
 
 const navItems = {
   "/": {
@@ -29,32 +30,41 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
 
   return (
     <header>
-      <div className="mb-8 flex justify-between items-center">
+      <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start">
         <div>
           <h1 className="font-bold text-xl">anish kumar</h1>
           <p className="text-sm text-neutral-500">
-            MERN Stack Developer · 3+ yrs at{" "}
+            {site.title} · Previously at{" "}
             <Link
               className="underline underline-offset-4"
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.cubiclogics.com/"
+              href={site.companyUrl}
             >
-              Cubic Logics
+              {site.company}
             </Link>
           </p>
+          <p className="text-sm mt-1">
+            <a
+              href={`tel:${site.phone}`}
+              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+            >
+              {site.phone}
+            </a>
+            <span className="text-neutral-400 mx-2">·</span>
+            <a
+              href={`mailto:${site.email}`}
+              className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
+            >
+              {site.email}
+            </a>
+          </p>
         </div>
-        <div className="relative flex items-center space-x-2 py-2">
-          <SocialsLink href="tel:+919649275150">
-            <PhoneIcon />
-          </SocialsLink>
-          <SocialsLink href="mailto:anishbishnoi127@gmail.com">
-            <GmailIcon />
-          </SocialsLink>
-          <SocialsLink href="https://github.com/anishkumar127">
+        <div className="relative flex items-center space-x-2 py-2 sm:py-0">
+          <SocialsLink href={site.github}>
             <GithubIcon />
           </SocialsLink>
-          <SocialsLink href="https://www.linkedin.com/in/anishkumar127">
+          <SocialsLink href={site.linkedin}>
             <LinkedinIcon />
           </SocialsLink>
           <button
@@ -192,44 +202,6 @@ function LinkedinIcon() {
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
       <rect width="4" height="12" x="2" y="9" />
       <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-phone h-4 w-4"
-    >
-      <path d="M22 16.92V21a2 2 0 0 1-2.18 2c-4.96-.58-9.71-3.73-12.77-8C4.11 12.64 1 7.92 1 3A2 2 0 0 1 3 1h4.09a2 2 0 0 1 2 1.72c.2 1.52.57 3 1.11 4.44a2 2 0 0 1-.45 2.11l-2.2 2.2a16 16 0 0 0 6.36 6.36l2.2-2.2a2 2 0 0 1 2.11-.45c1.44.54 2.92.91 4.44 1.11A2 2 0 0 1 22 16.92z" />
-    </svg>
-  );
-}
-
-function GmailIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="lucide lucide-mail h-4 w-4"
-    >
-      <path d="M22 4H2c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h20c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zM2 6l10 7 10-7" />
     </svg>
   );
 }
