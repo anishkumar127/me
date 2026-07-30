@@ -21,6 +21,7 @@ const categoryLabels: Record<ProjectCategory, string> = {
 
 function getLinkLabel(url: string) {
   if (url.includes("github.com")) return "View on GitHub";
+  if (url.includes("npmjs.com")) return "View on npm";
   if (url.includes("marketplace.microsoft.com")) return "View on Marketplace";
   return "Visit website";
 }

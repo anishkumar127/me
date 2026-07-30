@@ -1,7 +1,7 @@
 export const about = {
   hook: "3+ years building production apps for Microsoft 365, fintech, and HR — full stack from UI to AWS.",
 
-  intro: `Full Stack Developer with 3+ years of experience, previously at Cubic Logics (apps365.com). I build end-to-end web applications — from SharePoint SPFx webparts and multi-tenant SaaS platforms to complex Node.js backends with MongoDB and PostgreSQL, deployed on AWS. I take ownership across frontend, backend, database design, and deployment.`,
+  intro: `With 3+ years of experience, previously at Cubic Logics (apps365.com), I build end-to-end web applications — from SharePoint SPFx webparts and multi-tenant SaaS platforms to complex Node.js backends with MongoDB and PostgreSQL, deployed on AWS. I take ownership across frontend, backend, database design, and deployment.`,
 
   easterEgg:
     "Passionate about leveraging modern web technologies to solve complex problems and deliver exceptional user experiences.",
@@ -23,12 +23,10 @@ export const about = {
   ],
 
   achievements: [
-    "Built Helpdesk 365 (Microsoft Marketplace, 4.9★) and Helpdesk 365 Add-ons — SPFx/Teams ticketing product used by SMEs across M365",
-    "Extended Helpdesk 365 across multi-tenant (Google/GCP) and Next.js + Hono + PostgreSQL architectures",
-    "Delivered Civic 365 (Microsoft Marketplace 311 CRM) and Civic 365 multi-tenant platform with SharePoint integration",
-    "Shipped production Finsensor AI tools — FinSoEasy360, ReconSoEasy360, RPTsoEasy360, and FAMsoEasy360 — with complex MongoDB/PostgreSQL backends on AWS",
-    "Independently developed and deployed OMSSoEasy360 (HRMS), FAMsoEasy360, and FP&A financial tools",
-    "Created Weavify — reusable React UI component library (MUI + Tailwind CSS)",
+    "Shipped Microsoft Marketplace products (Helpdesk 365 — 4.9★, Civic 365) used by SMEs and government clients",
+    "Built multi-tenant SaaS variants across SPFx, Next.js + PostgreSQL, and Hono API stacks",
+    "Delivered production fintech tools at Finsensor AI — reconciliation, statutory reporting, fixed assets, and HRMS",
+    "Solo-building a multi-organization HR SaaS (web + React Native mobile) for market launch",
   ],
 
   skills: {

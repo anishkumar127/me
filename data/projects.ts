@@ -18,64 +18,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "helpdesk-spfx",
-    name: "Helpdesk 365 (SharePoint / Microsoft Teams)",
+    id: "helpdesk-365",
+    name: "Helpdesk 365",
     category: "Cubic Logics",
     status: "Completed",
     period: "Mar 2023 – Feb 2026",
     tech: [
       "React.js",
       "Redux",
+      "Next.js",
       "SharePoint",
       "SPFx",
       "Fluent UI",
       "Microsoft Teams",
+      "Hono",
+      "PostgreSQL",
       "Azure DevOps",
     ],
     url: "https://marketplace.microsoft.com/en-us/product/office/wa200004972?tab=overview",
     description:
-      "Core product development on Helpdesk 365 — a Microsoft Marketplace ticketing system (4.9★, 311+ ratings) by Apps 365 & HR365 for SharePoint and Microsoft Teams. IT, HR, and Finance helpdesk with AI-powered automation, knowledge base, SLA management, and M365 ecosystem integration.",
+      "Flagship Microsoft Marketplace ticketing product (4.9★, 311+ ratings) by Apps 365 & HR365 for SharePoint and Microsoft Teams. IT, HR, and Finance helpdesk with AI-powered automation, knowledge base, SLA management, and M365 ecosystem integration.",
     highlights: [
-      "SPFx webparts and Teams tabs — deployable as web part, full page, or Teams personal/channel tab",
-      "Built features including dashboards, automation rules, approval workflows, Kanban view, and mail tracker",
+      "Core SPFx webparts and Teams tabs — dashboards, automation rules, approval workflows, Kanban view, and mail tracker",
+      "Add-ons package on Marketplace — CSAT surveys, chatbot, ticket archival, MS Forms integration, and multi-language support",
+      "Architecture variants: multi-tenant (Next.js + SharePoint + PostgreSQL on GCP), and Next.js + Hono API + PostgreSQL stack",
       "Microsoft 365 Certified App — GCC/GCC High compliant, Zero Trust security within M365",
     ],
-  },
-  {
-    id: "helpdesk-addons",
-    name: "Helpdesk 365 Add-ons",
-    category: "Cubic Logics",
-    status: "Completed",
-    period: "Mar 2023 – Feb 2026",
-    tech: ["React.js", "Redux", "SharePoint", "SPFx", "Fluent UI", "Microsoft Teams"],
-    url: "https://marketplace.microsoft.com/en-us/product/hr365bizapps365.hd365p5a001?tab=Overview",
-    description:
-      "Developed Helpdesk 365 Add-ons — extended SaaS package on Microsoft Marketplace with advanced ticketing capabilities for SharePoint and Microsoft Teams, including custom forms, knowledge base, multi-language support, and automation.",
-    highlights: [
-      "Modern view, rules & automation, approval workflows, chatbot, ticket archival, and SLA choices",
-      "Kanban view, CSAT surveys, custom columns, ticket splitting/merging, and MS Forms integration",
-      "Canned responses, email templates, auto-assign, auto-close, and multi-role support",
-    ],
-  },
-  {
-    id: "helpdesk-multitenant",
-    name: "Helpdesk 365 Multi-Tenant",
-    category: "Cubic Logics",
-    status: "Completed",
-    period: "Jan 2025 – Feb 2026",
-    tech: ["Next.js", "SharePoint", "PostgreSQL"],
-    description:
-      "Multi-tenant Helpdesk 365 for Google and GCP tenants — Next.js frontend integrated with SharePoint backend, supporting isolated tenant configurations.",
-  },
-  {
-    id: "helpdesk-hono",
-    name: "Helpdesk 365 (Hono API)",
-    category: "Cubic Logics",
-    status: "Completed",
-    period: "Mar 2023 – Feb 2026",
-    tech: ["Next.js", "Hono", "PostgreSQL"],
-    description:
-      "Alternative Helpdesk 365 stack using Next.js with Hono API layer and PostgreSQL for data persistence and improved performance.",
   },
   {
     id: "civic-365-spfx",
@@ -133,20 +101,6 @@ export const projects: Project[] = [
       "Published reusable logger npm packages for structured logging across SPFx webparts and Node.js services.",
   },
   {
-    id: "reconsoeasy360",
-    name: "ReconSoEasy360 (Vendor Reconciliation)",
-    category: "Freelancing",
-    status: "Active",
-    tech: ["MongoDB", "Express.js", "AWS", "React"],
-    url: "https://vendor-reconciliation-forked.vercel.app/",
-    description:
-      "Vendor reconciliation software at Finsensor AI — automatically match vendor statements against ledger records, identify discrepancies with detailed reasons for mismatches, and generate instant reconciliation reports so books reflect the true financial position.",
-    highlights: [
-      "Complex backend for automated matching, variance detection, and financial data processing",
-      "Full AWS deployment with real-time reporting dashboards",
-    ],
-  },
-  {
     id: "finsoeasy360",
     name: "FinSoEasy360 (Schedule III / Statutory Reporting)",
     category: "Freelancing",
@@ -179,6 +133,20 @@ export const projects: Project[] = [
     highlights: [
       "Backend for RPT mapping, intercompany eliminations, and consolidation adjustments",
       "Supports regulatory compliance for related party disclosures under Companies Act and Ind AS",
+    ],
+  },
+  {
+    id: "reconsoeasy360",
+    name: "ReconSoEasy360 (Vendor Reconciliation)",
+    category: "Freelancing",
+    status: "Active",
+    tech: ["MongoDB", "Express.js", "AWS", "React"],
+    url: "https://vendor-reconciliation-forked.vercel.app/",
+    description:
+      "Vendor reconciliation software at Finsensor AI — automatically match vendor statements against ledger records, identify discrepancies with detailed reasons for mismatches, and generate instant reconciliation reports so books reflect the true financial position.",
+    highlights: [
+      "Complex backend for automated matching, variance detection, and financial data processing",
+      "Full AWS deployment with real-time reporting dashboards",
     ],
   },
   {
@@ -224,15 +192,6 @@ export const projects: Project[] = [
       "Additional client projects including financial data management tools and enterprise web applications.",
   },
   {
-    id: "weavify",
-    name: "Weavify UI Library",
-    category: "Personal",
-    status: "Active",
-    tech: ["React", "MUI", "Tailwind CSS"],
-    description:
-      "Reusable React UI component library built with Material-UI and Tailwind CSS to accelerate development and ensure design consistency across projects.",
-  },
-  {
     id: "personal-saas",
     name: "Personal HR SaaS (Multi-Organization)",
     category: "Personal",
@@ -263,6 +222,16 @@ export const projects: Project[] = [
       "Human Resource Management System built on SharePoint using SPFx — custom webparts for employee records, attendance tracking, and HR workflows within the SharePoint ecosystem.",
   },
   {
+    id: "weavify",
+    name: "Weavify UI Library",
+    category: "Personal",
+    status: "Active",
+    tech: ["React", "MUI", "Tailwind CSS"],
+    url: "https://www.npmjs.com/package/weavify",
+    description:
+      "Reusable React UI component library built with Material-UI and Tailwind CSS to accelerate development and ensure design consistency across projects.",
+  },
+  {
     id: "water-reminder",
     name: "Water Reminder Extension",
     category: "Learning",
@@ -290,3 +259,22 @@ export const freelanceProjects = projects.filter(
 );
 export const personalProjects = projects.filter((p) => p.category === "Personal");
 export const learningProjects = projects.filter((p) => p.category === "Learning");
+
+export const projectTabs = [
+  { id: "cubic", label: "Cubic Logics", category: "Cubic Logics" as const },
+  { id: "freelancing", label: "Freelancing", category: "Freelancing" as const },
+  { id: "personal", label: "Personal", category: "Personal" as const },
+  { id: "fun", label: "Fun / Learning", category: "Learning" as const },
+] as const;
+
+export type ProjectTabId = (typeof projectTabs)[number]["id"];
+
+export function getAllTech(): string[] {
+  const techSet = new Set<string>();
+  for (const project of projects) {
+    for (const t of project.tech) {
+      techSet.add(t);
+    }
+  }
+  return Array.from(techSet).sort();
+}

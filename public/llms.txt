@@ -1,0 +1,30 @@
+# Anish Kumar — Full Stack Developer
+
+> Portfolio of Anish Kumar, Full Stack Developer with 3+ years building production apps for Microsoft 365, fintech, and HR.
+
+## About
+
+- Name: Anish Kumar
+- Title: Full Stack Developer
+- Location: Bengaluru, Karnataka, India
+- Email: anishbishnoi127@gmail.com
+- GitHub: https://github.com/anishkumar127
+- LinkedIn: https://www.linkedin.com/in/anishkumar127/
+- Resume: https://drive.google.com/file/d/1M0dBUFKkU5XhyPkpw0X-8K1GQaj-bsVW/view?usp=sharing
+
+## Skills
+
+React.js, Next.js, Node.js, MongoDB, PostgreSQL, SharePoint, SPFx, Microsoft Teams, Fastify.js, Express.js, Hono, AWS, Azure DevOps, React Native, TypeScript
+
+## Pages
+
+- Home / About: https://anishkumar127.github.io/
+- Projects: https://anishkumar127.github.io/projects
+- Blog: https://anishkumar127.github.io/blog
+
+## Notable Work
+
+- Helpdesk 365 — Microsoft Marketplace ticketing product (4.9★)
+- Civic 365 — Microsoft Marketplace 311 CRM platform
+- Finsensor AI fintech tools — reconciliation, statutory reporting, fixed assets, HRMS
+- Personal HR SaaS — multi-organization platform (web + mobile)
