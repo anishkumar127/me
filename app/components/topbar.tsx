@@ -44,12 +44,15 @@ export default function Topbar({ resumeLink }: { resumeLink?: string }) {
               {site.company}
             </Link>
           </p>
+          <p className="text-sm text-green-700 dark:text-green-400 mt-1">
+            {site.openToWork}
+          </p>
           <p className="text-sm mt-1">
             <a
               href={`tel:${site.phone}`}
               className="underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-300"
             >
-              {site.phone}
+              {site.phoneDisplay}
             </a>
             <span className="text-neutral-400 mx-2">·</span>
             <a

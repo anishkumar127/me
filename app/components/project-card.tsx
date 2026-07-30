@@ -47,33 +47,43 @@ function ExternalLinkIcon() {
   );
 }
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+  hideCategory = false,
+}: {
+  project: Project;
+  hideCategory?: boolean;
+}) {
   const hasUrl = project.url && project.url !== "#";
 
   return (
     <div className="bg-transparent border border-[#ecebeb] dark:border-[#333] transition-colors p-3 flex flex-col space-y-2 rounded-md">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-sm font-medium">{project.name}</span>
-        <span
-          className={clsx(
-            "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
-            project.status === "Active"
-              ? "text-blue-500 bg-blue-500/10"
-              : "text-neutral-500 bg-neutral-500/10",
+      <div className="space-y-1">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-sm font-medium">{project.name}</span>
+          <span
+            className={clsx(
+              "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
+              project.status === "Active"
+                ? "text-blue-500 bg-blue-500/10"
+                : "text-neutral-500 bg-neutral-500/10",
+            )}
+          >
+            {project.status}
+          </span>
+          {!hideCategory && (
+            <span
+              className={clsx(
+                "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
+                categoryStyles[project.category],
+              )}
+            >
+              {categoryLabels[project.category]}
+            </span>
           )}
-        >
-          {project.status}
-        </span>
-        <span
-          className={clsx(
-            "tracking-tighter text-xs font-medium rounded-full px-2 py-0.5",
-            categoryStyles[project.category],
-          )}
-        >
-          {categoryLabels[project.category]}
-        </span>
+        </div>
         {project.period && (
-          <span className="text-xs text-neutral-400">{project.period}</span>
+          <p className="text-xs text-neutral-400">{project.period}</p>
         )}
       </div>
 

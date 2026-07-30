@@ -18,6 +18,12 @@ export default function Page() {
   return (
     <div className="space-y-6 text-sm">
       <section>
+        <p className="text-neutral-600 dark:text-neutral-400 font-medium">
+          {about.hook}
+        </p>
+      </section>
+
+      <section>
         <p className="text-justify">
           Hi, I&apos;m {site.name}, a {site.title} based in{" "}
           {site.workLocation}. {about.intro} <EasterEgg />
