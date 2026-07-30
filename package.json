@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next out",
+    "preview": "pnpm build && npx --yes serve out"
   },
   "dependencies": {
     "@types/node": "20.5.9",

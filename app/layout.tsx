@@ -108,7 +108,7 @@ export default function RootLayout({
     <html lang="en" className={roboto_mono.className} suppressHydrationWarning>
       <head>
         <JsonLd />
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary" />
+        <link rel="alternate" type="text/plain" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/llms.txt`} title="LLM summary" />
       </head>
       <body className="antialiased min-h-screen">
         <Providers>
